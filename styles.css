@@ -182,15 +182,6 @@ h3 {
   }
 }
 
-@keyframes concept-fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -236,12 +227,6 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
-  opacity: 0;
-}
-
-.concept-sheet-section.is-visible .concept-sheet-frame img {
-  animation: concept-fade-in 900ms ease-out 120ms forwards;
-  will-change: opacity;
 }
 
 .section {
@@ -372,10 +357,6 @@ blockquote {
   .reveal {
     opacity: 1;
     transform: none;
-  }
-
-  .concept-sheet-frame img {
-    opacity: 1;
   }
 }
 
