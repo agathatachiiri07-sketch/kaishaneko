@@ -193,7 +193,7 @@ h3 {
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  background-size: 112%;
+  background-size: contain;
   min-height: 520px;
 }
 
@@ -370,7 +370,7 @@ blockquote {
   .hero-visual {
     min-height: 380px;
     background-attachment: scroll;
-    background-size: 118%;
+    background-size: contain;
   }
 
   .product-grid {
