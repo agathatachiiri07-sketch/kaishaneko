@@ -358,16 +358,29 @@ blockquote {
 .origin-copy h2 {
   margin-bottom: 1rem;
   font-size: clamp(1.8rem, 3.3vw, 2.9rem);
+  white-space: nowrap;
+  max-width: none;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
+  letter-spacing: 0.03em;
 }
 
-.origin-copy > p {
+.origin-subtext {
   line-height: 1.7;
-  max-width: 31ch;
+  max-width: none;
+  margin: 0;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
+  font-size: clamp(1rem, 1.55vw, 1.35rem);
+}
+
+.origin-subtext span {
+  display: block;
+  white-space: nowrap;
 }
 
 .origin-en {
   margin-top: 1rem;
   color: #a98b57;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
 }
 
 .origin-seal {
@@ -602,10 +615,11 @@ blockquote {
 
   .origin-copy h2 {
     font-size: clamp(1.4rem, 7vw, 2rem);
+    white-space: nowrap;
   }
 
-  .origin-copy > p {
-    max-width: 100%;
+  .origin-subtext span {
+    white-space: nowrap;
   }
 
   .map-label {
