@@ -189,7 +189,7 @@ h3 {
 
 .hero-visual {
   background-color: transparent;
-  background-image: url("assets/hero-replacement.png");
+  background-image: linear-gradient(rgba(244, 240, 231, 0.34), rgba(244, 240, 231, 0.34)), url("assets/hero-replacement.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
