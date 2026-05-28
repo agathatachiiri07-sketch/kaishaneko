@@ -98,6 +98,23 @@ p {
   color: var(--text);
 }
 
+.main-nav .order-now-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.42rem 0.9rem;
+  border: 1px solid #7f7f7f;
+  border-radius: 999px;
+  background: #8f8f8f;
+  color: #fff;
+  line-height: 1;
+}
+
+.main-nav .order-now-btn:hover {
+  background: #7b7b7b;
+  color: #fff;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
