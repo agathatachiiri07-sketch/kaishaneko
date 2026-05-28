@@ -68,7 +68,7 @@ p {
 .brand {
   font-size: 1.05rem;
   letter-spacing: 0.09em;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 
 .main-nav {
