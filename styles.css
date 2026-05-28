@@ -154,6 +154,11 @@ h3 {
   max-width: 50ch;
 }
 
+.hero-copy h1 {
+  max-width: none;
+  white-space: nowrap;
+}
+
 .text-cta {
   display: inline-block;
   margin-top: 1.3rem;
@@ -185,7 +190,7 @@ h3 {
   background-color: transparent;
   background-image: linear-gradient(rgba(244, 240, 231, 0.34), rgba(244, 240, 231, 0.34)), url("assets/hero-replacement.png");
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: 72% center;
   background-attachment: scroll;
   background-size: contain;
   min-height: 520px;
