@@ -119,7 +119,7 @@ p {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
+  grid-template-columns: 0.95fr 1.05fr;
 }
 
 .hero-copy {
@@ -183,7 +183,8 @@ h3 {
   background-image: url("assets/hero-replacement.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;
+  background-size: 112%;
+  min-height: 520px;
 }
 
 .concept-sheet-section {
@@ -338,6 +339,11 @@ blockquote {
   .hero-visual,
   .story-visual {
     min-height: 320px;
+  }
+
+  .hero-visual {
+    min-height: 380px;
+    background-size: 118%;
   }
 
   .product-grid {
