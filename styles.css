@@ -182,6 +182,16 @@ h3 {
   }
 }
 
+@keyframes concept-drift {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-10px) scale(1.025);
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -227,6 +237,9 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
+  animation: concept-drift 14s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .section {
