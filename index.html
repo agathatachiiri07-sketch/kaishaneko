@@ -3,19 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>kaishaneko - minimal web studio</title>
+    <title>kaishaneko - thoughtful care for daily rituals</title>
     <meta
       name="description"
-      content="Elegant minimal one-page website for kaishaneko."
+      content="An elegant one-page brand site inspired by refined editorial design."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <div class="container topbar-inner">
+    <div class="notice-bar">
+      <p>
+        New: Solace Hydration Hand Serum now available for daily rituals.
+      </p>
+    </div>
+
+    <header class="site-header">
+      <div class="container header-inner">
         <a class="brand" href="#home">kaishaneko</a>
-        <nav class="topnav" aria-label="Main navigation">
-          <a href="#work">Work</a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#collections">Collections</a>
+          <a href="#stories">Stories</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
@@ -23,53 +30,124 @@
     </header>
 
     <main id="home">
-      <section class="hero section">
-        <div class="container hero-inner">
-          <p class="kicker">Independent design + frontend studio</p>
-          <h1>Elegant digital spaces with less noise and more clarity.</h1>
-          <p class="intro">
-            We design and build refined one-page websites for modern brands,
-            founders, and creators.
-          </p>
-          <a class="button" href="#contact">Start a project</a>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Skin, Body, Home</p>
+            <h1>Care formulas made for thoughtful everyday routines.</h1>
+            <p>
+              We create tactile essentials with calm fragrances and balanced
+              textures, designed to elevate ordinary moments.
+            </p>
+            <a href="#collections" class="text-cta">Explore collections</a>
+          </div>
+          <div class="hero-visual" aria-hidden="true"></div>
         </div>
       </section>
 
-      <section id="work" class="section">
+      <section id="collections" class="section">
         <div class="container">
-          <h2>What we do</h2>
-          <ul class="clean-list">
-            <li>One-page website design</li>
-            <li>Fast and accessible frontend implementation</li>
-            <li>Typography and content refinement</li>
-          </ul>
+          <div class="section-head">
+            <p class="eyebrow">Featured</p>
+            <h2>Curated collections</h2>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <p class="product-tag">Hydration</p>
+              <h3>Solace Replenishing Hand Serum</h3>
+              <p>
+                Niacinamide-rich lightweight serum that restores softness and
+                luminosity.
+              </p>
+              <p class="price">$38</p>
+            </article>
+
+            <article class="product-card">
+              <p class="product-tag">Body</p>
+              <h3>Andram Aromatic Hand Wash</h3>
+              <p>
+                A gentle gel cleanser with citrus, woods, and herbaceous notes.
+              </p>
+              <p class="price">$42</p>
+            </article>
+
+            <article class="product-card">
+              <p class="product-tag">Travel</p>
+              <h3>Departure Care Kit</h3>
+              <p>
+                Compact essentials suited for movement, flights, and overnight
+                stays.
+              </p>
+              <p class="price">$56</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="stories" class="section split-section">
+        <div class="container split-grid">
+          <div class="story-visual" aria-hidden="true"></div>
+          <div>
+            <p class="eyebrow">Editorial</p>
+            <h2>Precision in preparation, comfort in use.</h2>
+            <p>
+              Each formulation is developed with careful attention to texture,
+              aroma, and finish. The result is a measured, sensory experience
+              that feels purposeful from first application to final touch.
+            </p>
+            <a href="#about" class="text-cta">Read our philosophy</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote-section">
+        <div class="container quote-wrap">
+          <blockquote>
+            "A quiet ritual can become the most grounding part of a day."
+          </blockquote>
         </div>
       </section>
 
       <section id="about" class="section">
-        <div class="container narrow">
-          <h2>About</h2>
-          <p>
-            kaishaneko is a small studio focused on timeless, minimal interfaces
-            that communicate clearly and feel calm to use.
-          </p>
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2>Designed as an attentive neighbor.</h2>
+            <p>
+              Our spaces and products are built to blend naturally with daily
+              life while respecting local character, material honesty, and
+              long-term use.
+            </p>
+          </div>
+          <ul class="about-list">
+            <li>Considered ingredients</li>
+            <li>Balanced aromatic profiles</li>
+            <li>Minimal packaging language</li>
+            <li>Responsible production approach</li>
+          </ul>
         </div>
       </section>
 
-      <section id="contact" class="section">
-        <div class="container narrow">
-          <h2>Contact</h2>
-          <p>Say hello and tell us what you want to launch.</p>
-          <a class="text-link" href="mailto:hello@kaishaneko.com"
+      <section id="contact" class="section contact-section">
+        <div class="container contact-wrap">
+          <p class="eyebrow">Contact</p>
+          <h2>Visit or write to us</h2>
+          <p>
+            For product guidance, gifting, and wholesale inquiries, our team is
+            available throughout the week.
+          </p>
+          <a class="text-cta" href="mailto:hello@kaishaneko.com"
             >hello@kaishaneko.com</a
           >
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
+    <footer class="site-footer">
+      <div class="container footer-inner">
         <p>&copy; <span id="year"></span> kaishaneko</p>
+        <p>Privacy</p>
       </div>
     </footer>
 
