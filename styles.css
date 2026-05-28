@@ -130,7 +130,7 @@ p {
   align-items: center;
   background-image: url("assets/hero-section-background.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center center;
 }
 
