@@ -66,9 +66,14 @@ p {
 }
 
 .brand {
-  font-size: 1.05rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand img {
+  display: block;
+  width: auto;
+  height: 2rem;
 }
 
 .main-nav {
@@ -397,6 +402,10 @@ blockquote {
 
   .main-nav {
     gap: 0.8rem;
+  }
+
+  .brand img {
+    height: 1.7rem;
   }
 
   .header-buy {
