@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaishaneko</title>
+    <meta
+      name="description"
+      content="Kaishaneko builds fast, elegant digital experiences."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="logo" href="#home">kaishaneko</a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-list"
+        >
+          Menu
+        </button>
+        <nav>
+          <ul id="nav-list" class="nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Design + Development</p>
+            <h1>Beautiful websites that grow your business.</h1>
+            <p class="lead">
+              We craft high-performance, responsive sites that help brands stand
+              out and convert visitors into customers.
+            </p>
+            <div class="cta-group">
+              <a class="btn btn-primary" href="#contact">Start a project</a>
+              <a class="btn btn-outline" href="#services">See services</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h2>What you get</h2>
+            <ul>
+              <li>Fast loading and mobile-first layouts</li>
+              <li>Clear messaging and conversion-focused design</li>
+              <li>Clean code ready to scale</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <h2>Services</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Web Design</h3>
+              <p>
+                Thoughtful interfaces and brand-consistent visuals tailored to
+                your audience.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Frontend Development</h3>
+              <p>
+                Accessible, responsive implementations with modern HTML, CSS,
+                and JavaScript.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Optimization</h3>
+              <p>
+                Performance tuning and UX improvements that keep users engaged.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section alt">
+        <div class="container split">
+          <div>
+            <h2>About kaishaneko</h2>
+            <p>
+              We combine strategy, design, and engineering to deliver websites
+              that feel premium and perform reliably.
+            </p>
+            <p>
+              Whether you need a new launch site or a redesign, we focus on
+              outcomes: better clarity, stronger trust, and more leads.
+            </p>
+          </div>
+          <aside class="stat-block" aria-label="Company highlights">
+            <p><strong>100%</strong> responsive</p>
+            <p><strong>SEO-ready</strong> structure</p>
+            <p><strong>Maintainable</strong> codebase</p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container contact">
+          <h2>Let’s build your website</h2>
+          <p>
+            Ready to get started? Send a message and we’ll scope your project.
+          </p>
+          <a class="btn btn-primary" href="mailto:hello@kaishaneko.com"
+            >hello@kaishaneko.com</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> kaishaneko. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
