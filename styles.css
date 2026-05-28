@@ -195,16 +195,14 @@ h3 {
 .concept-sheet-frame {
   border: 1px solid var(--line);
   background: #efe8da;
-  min-height: 70vh;
-  max-height: 920px;
   margin-top: 1.2rem;
+  overflow: hidden;
 }
 
-.concept-sheet-frame object {
+.concept-sheet-frame img {
   display: block;
   width: 100%;
-  min-height: 70vh;
-  max-height: 920px;
+  height: auto;
 }
 
 .concept-sheet-actions {
@@ -386,11 +384,6 @@ blockquote {
 
   .product-grid {
     grid-template-columns: 1fr;
-  }
-
-  .concept-sheet-frame,
-  .concept-sheet-frame object {
-    min-height: 56vh;
   }
 
   .concept-sheet-actions {
