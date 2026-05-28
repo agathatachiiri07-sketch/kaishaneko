@@ -162,7 +162,7 @@ h3 {
 }
 
 .hero-visual {
-  background-color: #13110f;
+  background-color: transparent;
   background-image: url("assets/hero-replacement.png");
   background-repeat: no-repeat;
   background-position: center center;
