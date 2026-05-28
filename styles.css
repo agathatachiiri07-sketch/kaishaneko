@@ -88,7 +88,7 @@ p {
 }
 
 .hero {
-  min-height: calc(100vh - 4.8rem);
+  min-height: calc(86vh - 4.8rem);
   padding-top: clamp(2.4rem, 6vh, 4.5rem);
   border-bottom: 1px solid var(--line);
 }
@@ -99,7 +99,7 @@ p {
 }
 
 .hero-copy {
-  padding: clamp(5.4rem, 15vh, 10rem) clamp(0.5rem, 2vw, 2rem) clamp(3rem, 7vh, 6rem)
+  padding: clamp(5.2rem, 13vh, 8.5rem) clamp(0.5rem, 2vw, 2rem) clamp(1.6rem, 4vh, 3.2rem)
     0;
 }
 
@@ -314,6 +314,10 @@ blockquote {
   .split-grid,
   .about-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
   }
 
   .hero-copy {
