@@ -48,14 +48,6 @@ p {
   margin: 0 auto;
 }
 
-.notice-bar {
-  background: var(--accent);
-  color: #f9f5ec;
-  padding: 0.7rem 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
 .site-header {
   border-bottom: 1px solid var(--line);
   position: sticky;
