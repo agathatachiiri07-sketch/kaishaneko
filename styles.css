@@ -62,8 +62,8 @@ p {
 }
 
 .header-inner {
-  min-height: 5rem;
-  padding: 0.25rem 0;
+  min-height: 6.1rem;
+  padding: 0.45rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -79,7 +79,7 @@ p {
 .brand img {
   display: block;
   width: auto;
-  height: 2.8rem;
+  height: 3.3rem;
 }
 
 .main-nav {
@@ -451,8 +451,8 @@ h3 {
 }
 
 .product-card {
-  background: rgba(255, 255, 255, 0.28);
-  border: 1px solid var(--line);
+  background: transparent;
+  border: 0;
   padding: 1.3rem;
   min-height: 215px;
 }
@@ -460,13 +460,14 @@ h3 {
 .product-card-image {
   padding: 0;
   overflow: hidden;
+  min-height: 360px;
 }
 
 .product-card-image img {
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 215px;
+  min-height: 360px;
   object-fit: cover;
 }
 
@@ -827,7 +828,7 @@ blockquote {
   }
 
   .header-inner {
-    padding: 0.7rem 0;
+    padding: 1rem 0;
     align-items: flex-start;
     flex-direction: column;
   }
@@ -844,7 +845,7 @@ blockquote {
   }
 
   .brand img {
-    height: 2.2rem;
+    height: 2.6rem;
   }
 
   .product-grid {
