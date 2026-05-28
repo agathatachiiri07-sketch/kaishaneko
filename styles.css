@@ -84,12 +84,17 @@ p {
 
 .main-nav {
   display: flex;
+  align-items: center;
   gap: 1.2rem;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
 .main-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.2rem;
+  line-height: 1;
   font-size: 0.94rem;
   color: var(--muted);
 }
@@ -99,15 +104,12 @@ p {
 }
 
 .main-nav .order-now-btn {
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  padding: 0.42rem 0.9rem;
+  padding: 0.42rem 1rem;
   border: 1px solid #7f7f7f;
   border-radius: 999px;
   background: #8f8f8f;
   color: #fff;
-  line-height: 1;
 }
 
 .main-nav .order-now-btn:hover {
