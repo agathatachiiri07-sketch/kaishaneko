@@ -192,7 +192,7 @@ h3 {
   background-image: url("assets/hero-replacement.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: contain;
   min-height: 520px;
 }
@@ -369,7 +369,6 @@ blockquote {
 
   .hero-visual {
     min-height: 380px;
-    background-attachment: scroll;
     background-size: contain;
   }
 
