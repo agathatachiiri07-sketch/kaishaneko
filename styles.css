@@ -97,6 +97,7 @@ p {
 
 .hero {
   min-height: calc(100vh - 4.8rem);
+  padding-top: clamp(1rem, 2.8vh, 2.25rem);
   border-bottom: 1px solid var(--line);
 }
 
@@ -106,7 +107,7 @@ p {
 }
 
 .hero-copy {
-  padding: clamp(3rem, 9vh, 7rem) clamp(0.5rem, 2vw, 2rem) clamp(3rem, 7vh, 6rem)
+  padding: clamp(4.2rem, 12vh, 8.4rem) clamp(0.5rem, 2vw, 2rem) clamp(3rem, 7vh, 6rem)
     0;
 }
 
