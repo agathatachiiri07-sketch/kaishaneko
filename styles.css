@@ -105,23 +105,6 @@ p {
   gap: 1rem;
 }
 
-.header-buy {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.48rem 0.95rem;
-  border: 1px solid var(--text);
-  border-radius: 999px;
-  color: var(--text);
-  font-size: 0.86rem;
-  letter-spacing: 0.02em;
-  background: transparent;
-}
-
-.header-buy:hover {
-  background: rgba(31, 28, 23, 0.08);
-}
-
 .hero {
   min-height: calc(86vh - 4.8rem);
   padding-top: clamp(2.4rem, 6vh, 4.5rem);
@@ -401,7 +384,7 @@ blockquote {
 
   .header-actions {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-wrap: wrap;
     gap: 0.7rem;
   }
@@ -412,10 +395,6 @@ blockquote {
 
   .brand img {
     height: 2.2rem;
-  }
-
-  .header-buy {
-    margin-left: auto;
   }
 
   .product-grid {
