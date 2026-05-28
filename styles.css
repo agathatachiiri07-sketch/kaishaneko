@@ -57,17 +57,23 @@ p {
   z-index: 20;
 }
 
+.site-header .container {
+  width: min(1280px, 97vw);
+}
+
 .header-inner {
-  min-height: 4.1rem;
+  min-height: 5rem;
+  padding: 0.25rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
+  margin-left: -0.25rem;
 }
 
 .brand img {
