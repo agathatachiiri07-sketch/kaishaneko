@@ -169,6 +169,38 @@ h3 {
   background-size: contain;
 }
 
+.concept-sheet-section {
+  padding: clamp(2.3rem, 6vh, 4.5rem) 0;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.concept-sheet-frame {
+  border: 1px solid var(--line);
+  background: #efe8da;
+  min-height: 70vh;
+  max-height: 920px;
+  margin-top: 1.2rem;
+}
+
+.concept-sheet-frame object {
+  display: block;
+  width: 100%;
+  min-height: 70vh;
+  max-height: 920px;
+}
+
+.concept-sheet-actions {
+  display: flex;
+  gap: 1.1rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.concept-sheet-actions .text-cta {
+  margin-top: 0;
+}
+
 .section {
   padding: clamp(3rem, 8vh, 6rem) 0;
   border-bottom: 1px solid var(--line);
@@ -322,6 +354,16 @@ blockquote {
 
   .product-grid {
     grid-template-columns: 1fr;
+  }
+
+  .concept-sheet-frame,
+  .concept-sheet-frame object {
+    min-height: 56vh;
+  }
+
+  .concept-sheet-actions {
+    flex-wrap: wrap;
+    gap: 0.8rem;
   }
 
   .footer-inner {
