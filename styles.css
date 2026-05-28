@@ -163,10 +163,10 @@ h3 {
 
 .hero-visual {
   background-color: #13110f;
-  background-image: url("assets/hero-cat-cropped.png");
+  background-image: url("assets/hero-cat-original.jpeg");
   background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background-position: center center;
+  background-size: contain;
 }
 
 .section {
