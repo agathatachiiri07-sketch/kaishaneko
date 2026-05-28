@@ -5,7 +5,7 @@ if (yearEl) {
 }
 
 const revealTargets = document.querySelectorAll(
-  ".hero-copy, .hero-visual, .concept-sheet-section, .section, .quote-section, .site-footer"
+  ".hero-copy, .concept-sheet-section, .section, .quote-section, .site-footer"
 );
 
 if (revealTargets.length > 0) {
