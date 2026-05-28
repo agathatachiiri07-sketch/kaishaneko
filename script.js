@@ -9,9 +9,8 @@ const revealTargets = document.querySelectorAll(
 );
 
 if (revealTargets.length > 0) {
-  revealTargets.forEach((el, index) => {
+  revealTargets.forEach((el) => {
     el.classList.add("reveal");
-    el.style.transitionDelay = `${Math.min(index * 50, 220)}ms`;
   });
 
   if ("IntersectionObserver" in window) {
@@ -25,8 +24,8 @@ if (revealTargets.length > 0) {
         });
       },
       {
-        threshold: 0.12,
-        rootMargin: "0px 0px -8% 0px",
+        threshold: 0.08,
+        rootMargin: "0px 0px -5% 0px",
       }
     );
 

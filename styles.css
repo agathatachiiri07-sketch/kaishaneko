@@ -172,25 +172,13 @@ h3 {
   opacity: 0.75;
 }
 
-@keyframes hero-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 650ms ease, transform 650ms ease;
+  transition: opacity 420ms ease-out;
 }
 
 .reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .hero-visual,
@@ -206,8 +194,6 @@ h3 {
   background-position: center center;
   background-size: 112%;
   min-height: 520px;
-  animation: hero-float 7s ease-in-out infinite;
-  will-change: transform;
 }
 
 .concept-sheet-section {
