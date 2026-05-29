@@ -134,6 +134,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
 }
 
 .hero-grid {
@@ -800,6 +801,7 @@ blockquote {
   .hero {
     min-height: auto;
     padding: 2.2rem 0 2.8rem;
+    background-attachment: scroll;
   }
 
   .hero-grid {
