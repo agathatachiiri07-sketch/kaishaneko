@@ -254,7 +254,7 @@ h3 {
 }
 
 .concept-sheet-section {
-  padding: clamp(2.6rem, 6vh, 5rem) 0;
+  padding: clamp(4rem, 10vh, 7rem) 0;
   border-bottom: 1px solid var(--line);
   background: var(--bg);
 }
