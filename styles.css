@@ -6,6 +6,7 @@
   --muted: #595652;
   --line: #d9d5cc;
   --accent: #31302d;
+  --latin-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --nav-offset: 5.8rem;
 }
 
@@ -197,7 +198,27 @@ p {
 .hero-copy,
 .hero-copy p,
 .hero .text-cta {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--latin-font);
+}
+
+.main-nav a,
+.text-cta,
+.process-subtitle,
+.pricing-subtitle,
+#about .eyebrow,
+#about h2,
+#about p,
+#about .about-list li,
+#faq .eyebrow,
+#faq h2,
+#faq p,
+#faq .faq-list li,
+#contact .eyebrow,
+#contact h2,
+#contact p,
+#contact .text-cta,
+.footer-inner p {
+  font-family: var(--latin-font);
 }
 
 .eyebrow {
