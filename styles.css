@@ -616,6 +616,21 @@ h3 {
   border-bottom: 0;
 }
 
+.faq-list li {
+  display: grid;
+  gap: 0.42rem;
+}
+
+.faq-list strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.faq-list span {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .contact-section {
   background: var(--bg);
 }
