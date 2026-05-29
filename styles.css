@@ -1,11 +1,11 @@
 :root {
-  --bg: #f4f0e7;
-  --surface: #ece6d8;
-  --surface-deep: #dfd5c2;
-  --text: #25221d;
-  --muted: #6a6155;
-  --line: #d1c5b0;
-  --accent: #1f1c17;
+  --bg: #f7f6f2;
+  --surface: #fcfcfb;
+  --surface-deep: #f2efe9;
+  --text: #31302d;
+  --muted: #595652;
+  --line: #d9d5cc;
+  --accent: #31302d;
 }
 
 * {
@@ -18,17 +18,17 @@ html {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
   color: var(--text);
   background: var(--bg);
-  line-height: 1.55;
+  line-height: 1.7;
   text-transform: uppercase;
 }
 
 h1,
 h2,
 h3 {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
   font-weight: 500;
   letter-spacing: -0.01em;
 }
@@ -52,7 +52,7 @@ p {
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
-  background: rgba(244, 240, 231, 0.92);
+  background: rgba(247, 246, 242, 0.95);
   backdrop-filter: blur(6px);
   z-index: 20;
 }
@@ -96,7 +96,9 @@ p {
   min-height: 2.2rem;
   line-height: 1;
   font-size: 0.94rem;
-  color: var(--muted);
+  color: #6d685f;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
+  letter-spacing: 0.03em;
 }
 
 .main-nav a:hover {
@@ -143,11 +145,13 @@ p {
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
+  background-color: rgba(247, 246, 242, 0.9);
   background-image: url("assets/hero-section-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  background-blend-mode: lighten;
 }
 
 .hero-grid {
@@ -166,14 +170,15 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: transparent;
+  border: 1px solid var(--line);
+  background: rgba(252, 252, 251, 0.82);
 }
 
 .eyebrow {
   font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--muted);
+  letter-spacing: 0.12em;
+  color: #8f8a81;
   margin-bottom: 0.8rem;
 }
 
@@ -247,7 +252,7 @@ h3 {
 .concept-sheet-section {
   padding: clamp(2.6rem, 6vh, 5rem) 0;
   border-bottom: 1px solid var(--line);
-  background: #f7f6f2;
+  background: var(--bg);
 }
 
 .process-wrap {
@@ -463,6 +468,7 @@ h3 {
 .section {
   padding: clamp(3rem, 8vh, 6rem) 0;
   border-bottom: 1px solid var(--line);
+  background: var(--bg);
 }
 
 .section-head {
@@ -476,8 +482,8 @@ h3 {
 }
 
 .product-card {
-  background: transparent;
-  border: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
   padding: 1.3rem;
   min-height: 215px;
 }
@@ -510,7 +516,7 @@ h3 {
 }
 
 .split-section {
-  background: rgba(255, 255, 255, 0.22);
+  background: var(--bg);
 }
 
 .split-grid {
@@ -522,6 +528,12 @@ h3 {
 
 .split-grid p {
   max-width: 55ch;
+}
+
+.split-grid > * {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: clamp(1.1rem, 2vw, 1.5rem);
 }
 
 .about-grid {
@@ -536,7 +548,13 @@ h3 {
   margin: 0;
   padding: 0;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.28);
+  background: var(--surface);
+}
+
+.about-grid > div {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: clamp(1.1rem, 2vw, 1.5rem);
 }
 
 .about-list li {
@@ -550,21 +568,24 @@ h3 {
 }
 
 .contact-section {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--bg);
 }
 
 .contact-wrap {
   max-width: 720px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: clamp(1.2rem, 2.2vw, 1.8rem);
 }
 
 .origin-section {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.22));
+  background: var(--bg);
 }
 
 .care-note-section {
   padding: clamp(1.8rem, 4vh, 3rem) 0;
   border-bottom: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--bg);
 }
 
 .care-note-wrap {
@@ -572,6 +593,9 @@ h3 {
   grid-template-columns: auto 1fr;
   align-items: start;
   gap: 1.2rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: clamp(1.1rem, 2vw, 1.6rem);
 }
 
 .care-note-icon {
@@ -633,6 +657,12 @@ h3 {
   letter-spacing: 0.03em;
 }
 
+.origin-copy {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: clamp(1.1rem, 2vw, 1.6rem);
+}
+
 .origin-subtext {
   line-height: 1.7;
   max-width: none;
@@ -671,6 +701,9 @@ h3 {
   display: flex;
   justify-content: center;
   width: 100%;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: clamp(1.1rem, 2vw, 1.6rem);
 }
 
 .origin-map-image {
@@ -683,7 +716,8 @@ h3 {
 
 .site-footer {
   padding: 1.1rem 0;
-  background: #e5dbc8;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
 }
 
 .footer-inner {
@@ -694,7 +728,7 @@ h3 {
 }
 
 .footer-inner p {
-  color: #4c4438;
+  color: #6d685f;
   font-size: 0.9rem;
 }
 
