@@ -145,13 +145,11 @@ p {
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
-  background-color: rgba(247, 246, 242, 0.9);
   background-image: url("assets/hero-section-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
-  background-blend-mode: lighten;
 }
 
 .hero-grid {
@@ -170,8 +168,13 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid var(--line);
-  background: rgba(252, 252, 251, 0.82);
+  background: transparent;
+}
+
+.hero-copy,
+.hero-copy p,
+.hero .text-cta {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .eyebrow {
@@ -221,6 +224,7 @@ h3 {
   white-space: nowrap;
   text-align: center;
   margin-inline: auto;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .text-cta {
