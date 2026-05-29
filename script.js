@@ -14,7 +14,7 @@ if (brandLink) {
 }
 
 const revealTargets = document.querySelectorAll(
-  ".hero-copy, .concept-sheet-section, .section, .quote-section, .site-footer"
+  ".hero-copy, .concept-sheet-section, .section, .site-footer"
 );
 
 if (revealTargets.length > 0) {
