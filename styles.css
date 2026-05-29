@@ -203,6 +203,15 @@ h3 {
   max-width: 44ch;
 }
 
+.hero-subtext {
+  max-width: none;
+}
+
+.hero-subtext span {
+  display: block;
+  white-space: nowrap;
+}
+
 .hero-copy h1 {
   max-width: none;
   white-space: nowrap;
@@ -830,6 +839,10 @@ blockquote {
 
   .hero-copy {
     padding: 1rem 1rem;
+  }
+
+  .hero-subtext span {
+    white-space: normal;
   }
 
   .story-visual {
