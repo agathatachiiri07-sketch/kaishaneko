@@ -662,9 +662,9 @@ h3 {
 }
 
 .origin-copy {
-  border: 1px solid var(--line);
-  background: var(--surface);
-  padding: clamp(1.1rem, 2vw, 1.6rem);
+  border: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .origin-subtext {
