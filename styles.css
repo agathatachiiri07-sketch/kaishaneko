@@ -603,7 +603,7 @@ h3 {
 
 .origin-grid {
   display: grid;
-  grid-template-columns: 1fr 1.1fr;
+  grid-template-columns: 1fr 1.25fr;
   gap: clamp(1.5rem, 4vw, 3.5rem);
   align-items: center;
 }
@@ -674,7 +674,7 @@ h3 {
 }
 
 .origin-map-image {
-  width: min(560px, 100%);
+  width: min(680px, 100%);
   height: auto;
   display: block;
   margin: 0 auto;
@@ -796,7 +796,7 @@ h3 {
   }
 
   .origin-map-image {
-    width: min(620px, 96vw);
+    width: min(760px, 96vw);
   }
 }
 
