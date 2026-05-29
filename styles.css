@@ -586,6 +586,82 @@ h3 {
   padding: clamp(1.1rem, 2vw, 1.5rem);
 }
 
+.pricing-section {
+  background: var(--bg);
+}
+
+.pricing-wrap {
+  max-width: 1200px;
+}
+
+.pricing-table {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pricing-row {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.95fr) minmax(220px, 1fr) minmax(220px, 1fr);
+  gap: 0.75rem;
+}
+
+.pricing-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.pricing-label {
+  background: #e4dfda;
+  color: #3f3b35;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.pricing-empty {
+  border-color: transparent;
+  background: transparent;
+}
+
+.pricing-plan {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.pricing-plan.regular {
+  background: #1b5f97;
+  border-color: #1b5f97;
+}
+
+.pricing-plan.custom {
+  background: #8d2336;
+  border-color: #8d2336;
+}
+
+.pricing-value {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.pricing-copy {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.pricing-note {
+  margin: 1rem 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 0.9fr;
@@ -829,6 +905,20 @@ h3 {
   .split-grid,
   .about-grid {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .pricing-empty {
+    display: none;
+  }
+
+  .pricing-label {
+    justify-content: flex-start;
+    text-align: left;
   }
 
   .hero {
