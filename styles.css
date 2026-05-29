@@ -553,6 +553,46 @@ blockquote {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0.22));
 }
 
+.care-note-section {
+  padding: clamp(1.8rem, 4vh, 3rem) 0;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.care-note-wrap {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 1.2rem;
+}
+
+.care-note-icon {
+  width: 82px;
+  aspect-ratio: 1 / 1;
+  border: 1px solid rgba(107, 103, 96, 0.26);
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #3a3935;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+.care-note-copy h3 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
+  letter-spacing: 0.02em;
+  color: #2f2d29;
+}
+
+.care-note-copy p {
+  margin: 0;
+  color: #666259;
+  line-height: 1.75;
+  font-size: clamp(1rem, 1.65vw, 1.45rem);
+}
+
 .origin-grid {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -809,6 +849,11 @@ blockquote {
     grid-template-columns: 1fr;
   }
 
+  .care-note-wrap {
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+  }
+
   .origin-copy {
     max-width: 680px;
     margin: 0 auto;
@@ -852,6 +897,25 @@ blockquote {
 
   .product-grid {
     grid-template-columns: 1fr;
+  }
+
+  .care-note-wrap {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .care-note-icon {
+    margin: 0 auto;
+    width: 72px;
+    font-size: 2rem;
+  }
+
+  .care-note-copy h3 {
+    font-size: clamp(1.3rem, 6vw, 1.9rem);
+  }
+
+  .care-note-copy p {
+    font-size: clamp(1rem, 4.6vw, 1.2rem);
   }
 
   .process-title {
