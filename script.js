@@ -4,6 +4,15 @@ if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
+const brandLink = document.querySelector(".brand");
+
+if (brandLink) {
+  brandLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.location.assign(`${window.location.pathname}${window.location.search}`);
+  });
+}
+
 const revealTargets = document.querySelectorAll(
   ".hero-copy, .concept-sheet-section, .section, .quote-section, .site-footer"
 );
