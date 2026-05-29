@@ -705,9 +705,9 @@ h3 {
   display: flex;
   justify-content: center;
   width: 100%;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  padding: clamp(1.1rem, 2vw, 1.6rem);
+  border: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .origin-map-image {
@@ -715,7 +715,10 @@ h3 {
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 4px;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  background: transparent;
 }
 
 .site-footer {
