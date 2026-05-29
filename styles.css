@@ -526,12 +526,13 @@ h3 {
   flex-wrap: nowrap;
   width: max-content;
   gap: 0;
-  animation: collections-carousel-scroll 24s linear infinite;
+  animation: collections-carousel-scroll 40s linear infinite;
   will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 #collections .collections-track .product-card {
-  flex: 0 0 100vw;
+  flex: 0 0 clamp(260px, 30vw, 460px);
   border: 0;
   background: transparent;
   padding: 0;
@@ -539,8 +540,8 @@ h3 {
 }
 
 #collections .product-card-image {
-  aspect-ratio: auto;
-  height: clamp(320px, 62vh, 720px);
+  aspect-ratio: 5 / 4;
+  height: auto;
 }
 
 .product-card-image img {
@@ -842,7 +843,11 @@ h3 {
   }
 
   #collections .product-card-image {
-    height: clamp(280px, 52vh, 560px);
+    aspect-ratio: 5 / 4;
+  }
+
+  #collections .collections-track .product-card {
+    flex-basis: clamp(220px, 44vw, 360px);
   }
 
   .process-columns {
@@ -925,7 +930,11 @@ h3 {
   }
 
   #collections .product-card-image {
-    height: clamp(240px, 44vh, 420px);
+    aspect-ratio: 5 / 4;
+  }
+
+  #collections .collections-track .product-card {
+    flex-basis: clamp(180px, 74vw, 300px);
   }
 
   .care-note-wrap {
