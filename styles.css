@@ -157,6 +157,7 @@ p {
   display: grid;
   place-items: center;
   width: min(760px, 92vw);
+  margin-inline: auto;
   min-height: clamp(480px, 70vh, 760px);
 }
 
