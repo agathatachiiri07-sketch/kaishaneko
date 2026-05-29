@@ -216,43 +216,6 @@ h3 {
   opacity: 1;
 }
 
-.mascot-pop {
-  position: fixed;
-  right: clamp(0.8rem, 2vw, 2rem);
-  bottom: clamp(0.6rem, 1.8vw, 1.8rem);
-  width: clamp(110px, 12vw, 188px);
-  opacity: 0;
-  transform: translateY(28px) scale(0.78);
-  pointer-events: none;
-  z-index: 32;
-}
-
-.mascot-pop img {
-  display: block;
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 16px 26px rgba(42, 39, 33, 0.26));
-}
-
-@keyframes mascot-pop-in {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) scale(0.78) rotate(-3deg);
-  }
-  68% {
-    opacity: 1;
-    transform: translateY(-8px) scale(1.05) rotate(1.1deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1) rotate(0);
-  }
-}
-
-.mascot-pop.is-visible {
-  animation: mascot-pop-in 1s cubic-bezier(0.21, 0.95, 0.22, 1) forwards;
-}
-
 .story-visual {
   min-height: 440px;
   background: linear-gradient(145deg, var(--surface), var(--surface-deep));
@@ -826,15 +789,6 @@ blockquote {
     opacity: 1;
     transform: none;
   }
-
-  .mascot-pop {
-    opacity: 1;
-    transform: none;
-  }
-
-  .mascot-pop.is-visible {
-    animation: none;
-  }
 }
 
 @media (max-width: 980px) {
@@ -939,12 +893,6 @@ blockquote {
 
   .brand img {
     height: 2.6rem;
-  }
-
-  .mascot-pop {
-    width: clamp(84px, 24vw, 140px);
-    right: 0.7rem;
-    bottom: 0.5rem;
   }
 
   .product-grid {

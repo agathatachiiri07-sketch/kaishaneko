@@ -34,13 +34,3 @@ if (revealTargets.length > 0) {
     revealTargets.forEach((el) => el.classList.add("is-visible"));
   }
 }
-
-const mascot = document.querySelector(".mascot-pop");
-
-if (mascot) {
-  requestAnimationFrame(() => {
-    setTimeout(() => {
-      mascot.classList.add("is-visible");
-    }, 120);
-  });
-}
