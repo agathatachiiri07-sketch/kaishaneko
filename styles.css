@@ -485,6 +485,14 @@ h3 {
   gap: 1rem;
 }
 
+#collections .container {
+  width: min(1340px, 98vw);
+}
+
+#collections .product-grid {
+  gap: 1.25rem;
+}
+
 .product-card {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -497,6 +505,10 @@ h3 {
   overflow: hidden;
   aspect-ratio: 5 / 4;
   min-height: 0;
+}
+
+#collections .product-card-image {
+  min-height: 360px;
 }
 
 .product-card-image img {
