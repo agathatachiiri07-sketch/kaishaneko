@@ -369,6 +369,11 @@ h3 {
   height: auto;
 }
 
+.process-card-image-only img.process-under-visual {
+  width: 82%;
+  margin-inline: auto;
+}
+
 .process-card-below-arrow {
   width: min(560px, 42vw);
   max-width: 100%;
