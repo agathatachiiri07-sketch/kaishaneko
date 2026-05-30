@@ -143,6 +143,7 @@ p {
   letter-spacing: 0.06em;
   box-shadow: 0 8px 18px rgba(47, 43, 36, 0.12);
   transition: transform 260ms ease, box-shadow 260ms ease, color 260ms ease;
+  animation: order-now-glow 5.5s ease-in-out infinite;
 }
 
 .main-nav .order-now-btn::after {
@@ -173,6 +174,7 @@ p {
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+  animation: hero-pan 20s ease-in-out infinite alternate;
 }
 
 .hero-grid {
@@ -270,6 +272,7 @@ h3 {
   text-align: center;
   margin-inline: auto;
   font-family: Georgia, "Times New Roman", Times, serif;
+  animation: hero-title-float 8.5s ease-in-out infinite;
 }
 
 .text-cta {
@@ -278,19 +281,100 @@ h3 {
   border-bottom: 1px solid var(--text);
   color: var(--text);
   padding-bottom: 0.1rem;
+  transition: transform 320ms ease, letter-spacing 320ms ease, opacity 240ms ease;
 }
 
 .text-cta:hover {
   opacity: 0.75;
+  transform: translateY(-2px);
+  letter-spacing: 0.05em;
 }
 
 .reveal {
   opacity: 0;
-  transition: opacity 420ms ease-out;
+  filter: blur(2px);
+  transform: translate3d(0, 20px, 0) scale(0.988);
+  transition:
+    opacity 720ms cubic-bezier(0.2, 0.65, 0.2, 1) var(--reveal-delay, 0ms),
+    transform 820ms cubic-bezier(0.2, 0.65, 0.2, 1) var(--reveal-delay, 0ms),
+    filter 820ms cubic-bezier(0.2, 0.65, 0.2, 1) var(--reveal-delay, 0ms);
 }
 
 .reveal.is-visible {
   opacity: 1;
+  filter: blur(0);
+  transform: none;
+}
+
+@keyframes hero-pan {
+  from {
+    background-position: center center;
+  }
+  to {
+    background-position: center calc(50% + 18px);
+  }
+}
+
+@keyframes hero-title-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes order-now-glow {
+  0%,
+  100% {
+    box-shadow: 0 8px 18px rgba(47, 43, 36, 0.12);
+  }
+  50% {
+    box-shadow: 0 10px 24px rgba(47, 43, 36, 0.2);
+  }
+}
+
+@keyframes title-rule-glow {
+  0%,
+  100% {
+    opacity: 0.46;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scaleX(1.08);
+  }
+}
+
+@keyframes flow-arrow-pulse {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@keyframes map-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes icon-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
 }
 
 .story-visual {
@@ -325,6 +409,11 @@ h3 {
   width: clamp(3.2rem, 8vw, 8rem);
   height: 2px;
   background: rgba(134, 120, 95, 0.4);
+  animation: title-rule-glow 4.8s ease-in-out infinite;
+}
+
+.process-title span:last-child {
+  animation-delay: 0.7s;
 }
 
 .process-subtitle {
@@ -368,6 +457,7 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
+  transition: transform 460ms ease, box-shadow 460ms ease;
 }
 
 .process-card-image-only img.process-under-visual {
@@ -387,6 +477,7 @@ h3 {
   display: block;
   width: 100%;
   height: auto;
+  transition: transform 460ms ease, box-shadow 460ms ease;
 }
 
 .process-next-arrow {
@@ -395,6 +486,7 @@ h3 {
   height: clamp(70px, 9vh, 110px);
   background: #8f8a81;
   margin-top: 0.45rem;
+  animation: flow-arrow-pulse 2.8s ease-in-out infinite;
 }
 
 .process-next-arrow::after {
@@ -663,7 +755,8 @@ h3 {
   height: 100%;
   min-height: 0;
   object-fit: cover;
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0) scale(1);
+  transition: transform 820ms ease, filter 700ms ease;
 }
 
 .product-tag {
@@ -724,6 +817,11 @@ h3 {
   width: clamp(3.2rem, 8vw, 8rem);
   height: 2px;
   background: rgba(134, 120, 95, 0.4);
+  animation: title-rule-glow 4.8s ease-in-out infinite;
+}
+
+.pricing-title span:last-child {
+  animation-delay: 0.7s;
 }
 
 .pricing-subtitle {
@@ -756,6 +854,7 @@ h3 {
   background: var(--surface);
   color: var(--text);
   line-height: 1.45;
+  transition: transform 320ms ease, box-shadow 320ms ease;
 }
 
 .pricing-label {
@@ -829,6 +928,11 @@ h3 {
   width: clamp(3.2rem, 8vw, 8rem);
   height: 2px;
   background: rgba(134, 120, 95, 0.4);
+  animation: title-rule-glow 4.8s ease-in-out infinite;
+}
+
+.size-title span:last-child {
+  animation-delay: 0.7s;
 }
 
 .size-subtitle {
@@ -866,6 +970,7 @@ h3 {
   background: var(--surface);
   color: var(--text);
   line-height: 1.45;
+  transition: transform 320ms ease, box-shadow 320ms ease;
 }
 
 .size-label {
@@ -949,6 +1054,11 @@ h3 {
   width: clamp(3.2rem, 8vw, 8rem);
   height: 2px;
   background: rgba(134, 120, 95, 0.4);
+  animation: title-rule-glow 4.8s ease-in-out infinite;
+}
+
+.faq-title span:last-child {
+  animation-delay: 0.7s;
 }
 
 .faq-subtitle {
@@ -971,6 +1081,7 @@ h3 {
   border-radius: 1.15rem;
   background: var(--surface);
   overflow: hidden;
+  transition: transform 360ms ease, box-shadow 360ms ease;
 }
 
 .faq-item[open] {
@@ -1075,6 +1186,8 @@ h3 {
   color: #3a3935;
   font-size: 2.25rem;
   line-height: 1;
+  animation: icon-breathe 5.8s ease-in-out infinite;
+  transition: transform 320ms ease, box-shadow 320ms ease;
 }
 
 .care-note-copy h3 {
@@ -1182,6 +1295,8 @@ h3 {
   outline: none;
   border-radius: 0;
   background: transparent;
+  animation: map-float 8.5s ease-in-out infinite;
+  transition: transform 420ms ease;
 }
 
 .site-footer {
@@ -1227,6 +1342,39 @@ h3 {
   transform: translateY(-1px);
 }
 
+@media (hover: hover) and (pointer: fine) {
+  #collections .product-card:hover img {
+    transform: translate3d(0, -2px, 0) scale(1.04);
+    filter: saturate(1.04);
+  }
+
+  .process-card-image-only img:hover,
+  .process-card-below-arrow img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(49, 46, 40, 0.14);
+  }
+
+  .pricing-row:hover .pricing-cell,
+  .size-row:hover .size-cell {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(56, 50, 41, 0.09);
+  }
+
+  .faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(55, 49, 40, 0.12);
+  }
+
+  .origin-map-image:hover {
+    transform: translateY(-8px) scale(1.01);
+  }
+
+  .care-note-icon:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 22px rgba(52, 47, 39, 0.12);
+  }
+}
+
 .footer-instagram svg {
   width: 1rem;
   height: 1rem;
@@ -1248,11 +1396,21 @@ h3 {
   .reveal {
     opacity: 1;
     transform: none;
+    filter: none;
   }
 
   #collections .collections-track {
     animation: none !important;
     transform: none !important;
+  }
+
+  .hero,
+  .hero-copy h1,
+  .main-nav .order-now-btn,
+  .process-next-arrow,
+  .origin-map-image,
+  .care-note-icon {
+    animation: none !important;
   }
 }
 

@@ -53,12 +53,46 @@ if (collectionsTrack) {
   }
 }
 
-const revealTargets = document.querySelectorAll(
-  ".hero-copy, .concept-sheet-section, .section, .site-footer"
-);
+const revealTargets = [
+  ".hero-copy",
+  ".concept-sheet-section",
+  ".pricing-wrap",
+  ".size-wrap",
+  ".origin-grid",
+  ".faq-wrap",
+  ".care-note-wrap",
+  "#contact .contact-wrap",
+  ".site-footer",
+  ".hero-copy > *",
+  ".process-columns > *",
+  ".pricing-row",
+  ".size-row",
+  ".faq-item",
+  ".origin-copy > *",
+  ".origin-map-wrap",
+  ".care-note-wrap > *",
+  "#contact .contact-wrap > *",
+].flatMap((selector) => Array.from(document.querySelectorAll(selector)));
 
-if (revealTargets.length > 0) {
-  revealTargets.forEach((el) => {
+const uniqueRevealTargets = Array.from(new Set(revealTargets));
+
+const applyStagger = (selector, stepMs) => {
+  const elements = Array.from(document.querySelectorAll(selector));
+  elements.forEach((el, index) => {
+    el.style.setProperty("--reveal-delay", `${index * stepMs}ms`);
+  });
+};
+
+applyStagger(".hero-copy > *", 110);
+applyStagger(".process-columns > *", 95);
+applyStagger(".pricing-row", 70);
+applyStagger(".size-row", 70);
+applyStagger(".faq-item", 90);
+applyStagger(".origin-copy > *", 85);
+applyStagger(".care-note-wrap > *", 120);
+
+if (uniqueRevealTargets.length > 0) {
+  uniqueRevealTargets.forEach((el) => {
     el.classList.add("reveal");
   });
 
@@ -73,13 +107,13 @@ if (revealTargets.length > 0) {
         });
       },
       {
-        threshold: 0.08,
-        rootMargin: "0px 0px -5% 0px",
+        threshold: 0.12,
+        rootMargin: "0px 0px -8% 0px",
       }
     );
 
-    revealTargets.forEach((el) => observer.observe(el));
+    uniqueRevealTargets.forEach((el) => observer.observe(el));
   } else {
-    revealTargets.forEach((el) => el.classList.add("is-visible"));
+    uniqueRevealTargets.forEach((el) => el.classList.add("is-visible"));
   }
 }
