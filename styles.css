@@ -205,12 +205,11 @@ p {
 .text-cta,
 .process-subtitle,
 .pricing-subtitle,
+.faq-subtitle,
 #about .eyebrow,
 #about h2,
 #about p,
 #about .about-list li,
-#faq .faq-kicker,
-#faq .faq-title,
 #faq summary,
 #faq .faq-answer,
 #contact .eyebrow,
@@ -771,28 +770,36 @@ h3 {
   width: min(860px, 96vw);
 }
 
-.faq-kicker {
-  margin: 0;
-  text-align: center;
-  font-size: 0.74rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #8f8a81;
-  font-weight: 600;
-}
-
 .faq-title {
-  margin: 0.8rem 0 0;
-  text-align: center;
-  font-size: clamp(2.1rem, 5.2vw, 3.8rem);
-  line-height: 1.02;
-  letter-spacing: 0.02em;
-  color: var(--text);
+  margin: clamp(0.9rem, 2.2vh, 1.6rem) 0 clamp(0.6rem, 1.8vh, 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
+  font-size: clamp(1.8rem, 4.2vw, 3.2rem);
+  letter-spacing: 0.08em;
+  color: #2e2d2a;
   font-weight: 500;
 }
 
+.faq-title span {
+  width: clamp(3.2rem, 8vw, 8rem);
+  height: 2px;
+  background: rgba(134, 120, 95, 0.4);
+}
+
+.faq-subtitle {
+  margin: 0.4rem 0 1.9rem;
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  color: #9a8d76;
+  font-weight: 600;
+}
+
 .faq-accordion {
-  margin-top: 2.1rem;
+  margin-top: 0.9rem;
   display: grid;
   gap: 0.9rem;
 }
@@ -1075,7 +1082,17 @@ h3 {
   }
 
   .faq-title {
-    font-size: clamp(1.8rem, 7vw, 3rem);
+    font-size: clamp(1.45rem, 7vw, 2.2rem);
+    letter-spacing: 0.04em;
+    gap: 0.65rem;
+  }
+
+  .faq-title span {
+    width: 2.2rem;
+  }
+
+  .faq-subtitle {
+    margin-bottom: 1.25rem;
   }
 
   .faq-item summary {
