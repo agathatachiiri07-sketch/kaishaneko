@@ -327,7 +327,7 @@ h3 {
 }
 
 .process-subtitle {
-  margin: 0.4rem 0 1.9rem;
+  margin: 0.4rem 0 clamp(2.3rem, 5vh, 3.2rem);
   text-align: center;
   font-size: 0.85rem;
   letter-spacing: 0.16em;
@@ -336,11 +336,11 @@ h3 {
 }
 
 .process-columns {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: clamp(0.9rem, 2vw, 1.2rem);
-  background: #f7f6f2;
-  align-items: start;
+  margin-top: clamp(0.5rem, 1.6vh, 1.2rem);
 }
 
 .process-card {
@@ -349,17 +349,31 @@ h3 {
 }
 
 .process-card-image-only {
-  grid-column: 1 / 2;
+  width: min(720px, 52vw);
+  max-width: 100%;
   display: grid;
   gap: clamp(0.9rem, 2vw, 1.2rem);
   padding: 0;
   overflow: hidden;
+  border-right: 0 !important;
+}
+
+.process-card-image-only::after {
+  display: none !important;
+  content: none !important;
 }
 
 .process-card-image-only img {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.process-next-arrow {
+  font-size: clamp(1.9rem, 3.2vw, 2.8rem);
+  line-height: 1;
+  color: #8f8a81;
+  margin-top: 0.35rem;
 }
 
 .process-card:not(:last-child) {
@@ -1200,7 +1214,7 @@ h3 {
   }
 
   .process-columns {
-    grid-template-columns: 1fr;
+    margin-top: 0.35rem;
   }
 
   .process-card {
@@ -1210,7 +1224,9 @@ h3 {
   }
 
   .process-card-image-only {
+    width: min(680px, 94vw);
     padding: 0;
+    border-bottom: 0 !important;
   }
 
   .process-card:last-child {
@@ -1357,7 +1373,7 @@ h3 {
   }
 
   .process-subtitle {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.85rem;
   }
 
   .pricing-subtitle {
