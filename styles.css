@@ -705,13 +705,13 @@ h3 {
 }
 
 .pricing-plan.regular {
-  background: #2f8a57;
-  border-color: #2f8a57;
+  background: #2f5f49;
+  border-color: #2f5f49;
 }
 
 .pricing-plan.custom {
-  background: #c04f8a;
-  border-color: #c04f8a;
+  background: #7a3f5e;
+  border-color: #7a3f5e;
 }
 
 .pricing-value {
