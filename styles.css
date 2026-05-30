@@ -206,6 +206,7 @@ p {
 .process-subtitle,
 .pricing-subtitle,
 .faq-subtitle,
+.size-subtitle,
 #about .eyebrow,
 #about h2,
 #about p,
@@ -803,6 +804,94 @@ h3 {
   font-size: 0.9rem;
 }
 
+.size-section {
+  background: var(--bg);
+}
+
+.size-wrap {
+  max-width: 1200px;
+}
+
+.size-title {
+  margin: clamp(0.9rem, 2.2vh, 1.6rem) 0 clamp(0.6rem, 1.8vh, 1rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
+  font-size: clamp(1.8rem, 4.2vw, 3.2rem);
+  letter-spacing: 0.08em;
+  color: #2e2d2a;
+  padding-block: clamp(0.3rem, 0.9vh, 0.65rem);
+}
+
+.size-title span {
+  width: clamp(3.2rem, 8vw, 8rem);
+  height: 2px;
+  background: rgba(134, 120, 95, 0.4);
+}
+
+.size-subtitle {
+  margin: 0.4rem 0 1.9rem;
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  color: #9a8d76;
+  font-weight: 600;
+}
+
+.size-table-wrap {
+  overflow-x: auto;
+}
+
+.size-table {
+  min-width: 760px;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.size-row {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.9fr) repeat(3, minmax(150px, 1fr));
+  gap: 0.75rem;
+}
+
+.size-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.9rem 0.85rem;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.size-label {
+  background: #e4dfda;
+  color: #3f3b35;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.size-head {
+  background: var(--surface-deep);
+  font-weight: 700;
+}
+
+.size-empty {
+  border-color: transparent;
+  background: transparent;
+}
+
+.size-note {
+  margin: 0.95rem 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 0.9fr;
@@ -1187,6 +1276,10 @@ h3 {
     text-align: left;
   }
 
+  .size-table {
+    min-width: 680px;
+  }
+
   .faq-wrap {
     width: min(760px, 94vw);
   }
@@ -1422,6 +1515,20 @@ h3 {
   }
 
   .pricing-subtitle {
+    margin-bottom: 1.25rem;
+  }
+
+  .size-title {
+    font-size: clamp(1.45rem, 7vw, 2.2rem);
+    letter-spacing: 0.04em;
+    gap: 0.65rem;
+  }
+
+  .size-title span {
+    width: 2.2rem;
+  }
+
+  .size-subtitle {
     margin-bottom: 1.25rem;
   }
 
