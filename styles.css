@@ -627,10 +627,14 @@ h3 {
   flex-wrap: nowrap;
   width: max-content;
   gap: 0;
-  animation: collections-carousel-scroll 52s linear infinite;
+  animation: none;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
+}
+
+#collections .collections-track.is-animating {
+  animation: collections-carousel-scroll 52s linear infinite;
 }
 
 #collections .collections-track .product-card {
@@ -644,6 +648,7 @@ h3 {
 #collections .product-card-image {
   aspect-ratio: 5 / 4;
   height: auto;
+  background: var(--surface-deep);
 }
 
 .product-card-image img {

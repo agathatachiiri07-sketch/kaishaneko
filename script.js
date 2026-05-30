@@ -13,6 +13,46 @@ if (brandLink) {
   });
 }
 
+const collectionsTrack = document.querySelector("#collections .collections-track");
+
+if (collectionsTrack) {
+  const trackImages = Array.from(collectionsTrack.querySelectorAll("img"));
+
+  const startCarousel = () => {
+    collectionsTrack.classList.add("is-animating");
+  };
+
+  if (trackImages.length === 0) {
+    startCarousel();
+  } else {
+    let pending = 0;
+
+    trackImages.forEach((img) => {
+      if (!img.complete) {
+        pending += 1;
+      }
+    });
+
+    if (pending === 0) {
+      startCarousel();
+    } else {
+      const onReady = () => {
+        pending -= 1;
+        if (pending <= 0) {
+          startCarousel();
+        }
+      };
+
+      trackImages.forEach((img) => {
+        if (!img.complete) {
+          img.addEventListener("load", onReady, { once: true });
+          img.addEventListener("error", onReady, { once: true });
+        }
+      });
+    }
+  }
+}
+
 const revealTargets = document.querySelectorAll(
   ".hero-copy, .concept-sheet-section, .section, .site-footer"
 );
