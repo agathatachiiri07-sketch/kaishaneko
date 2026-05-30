@@ -1036,6 +1036,39 @@ h3 {
   font-size: 0.9rem;
 }
 
+.footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.footer-instagram {
+  width: 2rem;
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: #6d685f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 220ms ease, border-color 220ms ease, transform 220ms ease;
+}
+
+.footer-instagram:hover {
+  color: var(--text);
+  border-color: #b9b0a2;
+  transform: translateY(-1px);
+}
+
+.footer-instagram svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1350,5 +1383,9 @@ h3 {
   .footer-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .footer-meta {
+    gap: 0.6rem;
   }
 }
