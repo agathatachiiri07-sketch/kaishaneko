@@ -337,7 +337,7 @@ h3 {
 
 .process-columns {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 0;
   background: #f7f6f2;
 }
