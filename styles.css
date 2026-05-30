@@ -307,13 +307,13 @@ h3 {
 .hero-copy > .reveal {
   filter: none;
   transform: none;
-  transition: opacity 900ms ease var(--reveal-delay, 0ms);
+  transition: opacity 1500ms ease var(--reveal-delay, 0ms);
 }
 
 .hero-copy.reveal {
   filter: none;
   transform: none;
-  transition: opacity 780ms ease;
+  transition: opacity 1300ms ease;
 }
 
 .hero .text-cta {
