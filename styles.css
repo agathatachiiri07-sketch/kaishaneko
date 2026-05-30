@@ -627,13 +627,14 @@ h3 {
   flex-wrap: nowrap;
   width: max-content;
   gap: 0;
-  animation: collections-carousel-scroll 40s linear infinite;
+  animation: collections-carousel-scroll 52s linear infinite;
   will-change: transform;
   transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 #collections .collections-track .product-card {
-  flex: 0 0 clamp(260px, 30vw, 460px);
+  flex: 0 0 clamp(240px, 27vw, 32vw);
   border: 0;
   background: transparent;
   padding: 0;
@@ -651,6 +652,7 @@ h3 {
   height: 100%;
   min-height: 0;
   object-fit: cover;
+  transform: translateZ(0);
 }
 
 .product-tag {
