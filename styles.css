@@ -349,7 +349,7 @@ h3 {
 }
 
 .process-card-image-only {
-  width: min(720px, 52vw);
+  width: min(560px, 42vw);
   max-width: 100%;
   display: grid;
   gap: clamp(0.9rem, 2vw, 1.2rem);
@@ -1224,7 +1224,7 @@ h3 {
   }
 
   .process-card-image-only {
-    width: min(680px, 94vw);
+    width: min(560px, 86vw);
     padding: 0;
     border-bottom: 0 !important;
   }
