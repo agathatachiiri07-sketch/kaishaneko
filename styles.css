@@ -370,10 +370,23 @@ h3 {
 }
 
 .process-next-arrow {
-  font-size: clamp(1.9rem, 3.2vw, 2.8rem);
-  line-height: 1;
-  color: #8f8a81;
-  margin-top: 0.35rem;
+  position: relative;
+  width: 2px;
+  height: clamp(70px, 9vh, 110px);
+  background: #8f8a81;
+  margin-top: 0.45rem;
+}
+
+.process-next-arrow::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -9px;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #8f8a81;
+  border-bottom: 2px solid #8f8a81;
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .process-card:not(:last-child) {
