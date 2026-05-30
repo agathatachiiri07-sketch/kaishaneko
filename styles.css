@@ -241,6 +241,7 @@ h2 {
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   line-height: 1.16;
   color: var(--text);
+  padding-block: clamp(0.2rem, 0.7vh, 0.45rem);
 }
 
 h3 {
@@ -316,6 +317,7 @@ h3 {
   font-size: clamp(1.8rem, 4.2vw, 3.2rem);
   letter-spacing: 0.08em;
   color: #2e2d2a;
+  padding-block: clamp(0.3rem, 0.9vh, 0.65rem);
 }
 
 .process-title span {
@@ -646,6 +648,7 @@ h3 {
   font-size: clamp(1.8rem, 4.2vw, 3.2rem);
   letter-spacing: 0.08em;
   color: #2e2d2a;
+  padding-block: clamp(0.3rem, 0.9vh, 0.65rem);
 }
 
 .pricing-title span {
@@ -781,6 +784,7 @@ h3 {
   letter-spacing: 0.08em;
   color: #2e2d2a;
   font-weight: 500;
+  padding-block: clamp(0.3rem, 0.9vh, 0.65rem);
 }
 
 .faq-title span {
