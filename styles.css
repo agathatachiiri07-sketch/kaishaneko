@@ -702,19 +702,20 @@ h3 {
 }
 
 .pricing-plan {
-  color: #fff;
+  color: var(--text);
   font-weight: 700;
   letter-spacing: 0.04em;
 }
 
 .pricing-plan.regular {
-  background: #2f5f49;
-  border-color: #2f5f49;
+  background: #ffffff;
+  border-color: var(--line);
 }
 
 .pricing-plan.custom {
-  background: #7a3f5e;
-  border-color: #7a3f5e;
+  background: #8f8a81;
+  border-color: #8f8a81;
+  color: #fff;
 }
 
 .pricing-value {
