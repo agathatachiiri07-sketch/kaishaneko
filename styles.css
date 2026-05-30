@@ -337,9 +337,10 @@ h3 {
 
 .process-columns {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(0.9rem, 2vw, 1.2rem);
   background: #f7f6f2;
+  align-items: start;
 }
 
 .process-card {
@@ -348,6 +349,9 @@ h3 {
 }
 
 .process-card-image-only {
+  grid-column: 1 / 2;
+  display: grid;
+  gap: clamp(0.9rem, 2vw, 1.2rem);
   padding: 0;
   overflow: hidden;
 }
