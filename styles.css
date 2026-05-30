@@ -894,9 +894,9 @@ h3 {
   grid-template-columns: auto 1fr;
   align-items: start;
   gap: 1.2rem;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  padding: clamp(1.1rem, 2vw, 1.6rem);
+  border: 0;
+  background: transparent;
+  padding: 0;
 }
 
 .care-note-icon {
