@@ -369,6 +369,19 @@ h3 {
   height: auto;
 }
 
+.process-card-below-arrow {
+  width: min(560px, 42vw);
+  max-width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.process-card-below-arrow img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .process-next-arrow {
   position: relative;
   width: 2px;
@@ -1237,6 +1250,12 @@ h3 {
   }
 
   .process-card-image-only {
+    width: min(560px, 86vw);
+    padding: 0;
+    border-bottom: 0 !important;
+  }
+
+  .process-card-below-arrow {
     width: min(560px, 86vw);
     padding: 0;
     border-bottom: 0 !important;
