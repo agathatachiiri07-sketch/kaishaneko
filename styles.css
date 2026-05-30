@@ -884,7 +884,7 @@ h3 {
 }
 
 .care-note-section {
-  padding: clamp(1.8rem, 4vh, 3rem) 0;
+  padding: clamp(3rem, 8vh, 5rem) 0;
   border-bottom: 1px solid var(--line);
   background-image: linear-gradient(
       rgba(247, 246, 242, 0.72),
