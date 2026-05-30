@@ -306,6 +306,18 @@ h3 {
   transform: none;
 }
 
+.hero-copy > .reveal {
+  filter: none;
+  transform: none;
+  transition: opacity 900ms ease var(--reveal-delay, 0ms);
+}
+
+.hero-copy.reveal {
+  filter: none;
+  transform: none;
+  transition: opacity 780ms ease;
+}
+
 @keyframes hero-pan {
   from {
     background-position: center center;
