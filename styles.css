@@ -347,6 +347,17 @@ h3 {
   padding: 1.2rem 1.1rem 1.1rem;
 }
 
+.process-card-image-only {
+  padding: 0;
+  overflow: hidden;
+}
+
+.process-card-image-only img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .process-card:not(:last-child) {
   border-right: 1px solid #d9d5cc;
 }
@@ -1192,6 +1203,10 @@ h3 {
     padding: 1rem 0;
     border-right: 0;
     border-bottom: 1px solid #d9d5cc;
+  }
+
+  .process-card-image-only {
+    padding: 0;
   }
 
   .process-card:last-child {
