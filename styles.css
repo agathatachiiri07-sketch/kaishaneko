@@ -912,57 +912,18 @@ h3 {
   font-weight: 600;
 }
 
-.size-table-wrap {
-  overflow-x: auto;
-}
-
-.size-table {
-  min-width: 760px;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.size-row {
-  display: grid;
-  grid-template-columns: minmax(170px, 0.9fr) repeat(3, minmax(150px, 1fr));
-  gap: 0.75rem;
-}
-
-.size-cell {
+.size-image-wrap {
+  margin: 0;
   display: flex;
-  align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 0.9rem 0.85rem;
+}
+
+.size-chart-image {
+  width: min(980px, 100%);
+  height: auto;
+  display: block;
   border: 1px solid var(--line);
   background: var(--surface);
-  color: var(--text);
-  line-height: 1.45;
-  transition: transform 320ms ease, box-shadow 320ms ease;
-}
-
-.size-label {
-  background: #e4dfda;
-  color: #3f3b35;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-}
-
-.size-head {
-  background: var(--surface-deep);
-  font-weight: 700;
-}
-
-.size-empty {
-  border-color: transparent;
-  background: transparent;
-}
-
-.size-note {
-  margin: 0.95rem 0 0;
-  text-align: center;
-  color: var(--muted);
-  font-size: 0.9rem;
 }
 
 .about-grid {
@@ -1322,8 +1283,7 @@ h3 {
     box-shadow: 0 12px 28px rgba(49, 46, 40, 0.14);
   }
 
-  .pricing-row:hover .pricing-cell,
-  .size-row:hover .size-cell {
+  .pricing-row:hover .pricing-cell {
     transform: translateY(-2px);
     box-shadow: 0 10px 24px rgba(56, 50, 41, 0.09);
   }
@@ -1403,10 +1363,6 @@ h3 {
   .pricing-label {
     justify-content: flex-start;
     text-align: left;
-  }
-
-  .size-table {
-    min-width: 680px;
   }
 
   .faq-wrap {
