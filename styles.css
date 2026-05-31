@@ -8,6 +8,7 @@
   --accent: #31302d;
   --latin-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --nav-offset: 5.8rem;
+  --header-height: 5.6rem;
 }
 
 * {
@@ -166,7 +167,9 @@ p {
 
 .hero {
   min-height: calc(86vh - 4.8rem);
-  padding: clamp(2.4rem, 6vh, 4.5rem) 0;
+  padding-top: calc(clamp(2.4rem, 6vh, 4.5rem) + var(--header-height));
+  padding-bottom: clamp(2.4rem, 6vh, 4.5rem);
+  margin-top: calc(-1 * var(--header-height));
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
@@ -1468,7 +1471,9 @@ h3 {
 
   .hero {
     min-height: auto;
-    padding: 2.2rem 0 2.8rem;
+    padding-top: calc(2.2rem + var(--header-height));
+    padding-bottom: 2.8rem;
+    margin-top: calc(-1 * var(--header-height));
     background-attachment: scroll;
   }
 
@@ -1569,6 +1574,7 @@ h3 {
 @media (max-width: 700px) {
   :root {
     --nav-offset: 1rem;
+    --header-height: 0rem;
   }
 
   .site-header {
