@@ -1329,22 +1329,22 @@ h3 {
 }
 
 .footer-instagram {
-  width: 2rem;
+  width: 2.7rem;
   aspect-ratio: 1 / 1;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color: #6d685f;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: color 220ms ease, border-color 220ms ease, transform 220ms ease;
+  transition: color 220ms ease, transform 220ms ease, opacity 220ms ease;
 }
 
 .footer-instagram:hover {
   color: var(--text);
-  border-color: #b9b0a2;
   transform: translateY(-1px);
+  opacity: 0.88;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -1381,11 +1381,15 @@ h3 {
 }
 
 .footer-instagram svg {
-  width: 1rem;
-  height: 1rem;
+  width: 1.45rem;
+  height: 1.45rem;
   fill: none;
   stroke: currentColor;
   stroke-width: 1.7;
+}
+
+.footer-instagram svg * {
+  fill: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
