@@ -17,13 +17,25 @@ const collectionsTrack = document.querySelector("#collections .collections-track
 
 if (collectionsTrack) {
   const trackImages = Array.from(collectionsTrack.querySelectorAll("img"));
+  let hasStarted = false;
 
   const startCarousel = () => {
+    if (hasStarted) {
+      return;
+    }
+    hasStarted = true;
     collectionsTrack.classList.add("is-animating");
   };
 
-  if (trackImages.length === 0) {
+  // Fallback so the infinite loop still starts even if some load events never fire.
+  const forceStartTimer = window.setTimeout(startCarousel, 2200);
+  const finishCarouselSetup = () => {
+    window.clearTimeout(forceStartTimer);
     startCarousel();
+  };
+
+  if (trackImages.length === 0) {
+    finishCarouselSetup();
   } else {
     let pending = 0;
 
@@ -34,12 +46,12 @@ if (collectionsTrack) {
     });
 
     if (pending === 0) {
-      startCarousel();
+      finishCarouselSetup();
     } else {
       const onReady = () => {
         pending -= 1;
         if (pending <= 0) {
-          startCarousel();
+          finishCarouselSetup();
         }
       };
 
