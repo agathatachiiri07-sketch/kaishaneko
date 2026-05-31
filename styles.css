@@ -57,11 +57,12 @@ p {
 }
 
 .site-header {
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid rgba(217, 213, 204, 0.52);
   position: sticky;
   top: 0;
-  background: rgba(247, 246, 242, 0.92);
-  backdrop-filter: blur(10px) saturate(120%);
+  background: rgba(247, 246, 242, 0.42);
+  -webkit-backdrop-filter: blur(18px) saturate(145%);
+  backdrop-filter: blur(18px) saturate(145%);
   z-index: 20;
 }
 
