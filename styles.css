@@ -1148,7 +1148,7 @@ h3 {
 
 .contact-wrap {
   max-width: 720px;
-  border: 1px solid var(--line);
+  border: 0;
   background: var(--surface);
   padding: clamp(1.2rem, 2.2vw, 1.8rem);
 }
