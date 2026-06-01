@@ -663,42 +663,57 @@ h3 {
 }
 
 .collections-editorial {
+  width: min(1120px, 100%);
+  margin-inline: auto;
   display: grid;
-  gap: clamp(1.2rem, 2.4vh, 1.8rem);
+  gap: clamp(1.2rem, 2.4vh, 1.7rem);
+  position: relative;
+  padding-bottom: clamp(1rem, 2vh, 1.45rem);
+}
+
+.collections-editorial::after {
+  content: "";
+  width: min(260px, 32%);
+  height: 1px;
+  background: rgba(122, 116, 106, 0.35);
+  margin-left: clamp(2rem, 6vw, 4.2rem);
 }
 
 .collections-headline {
   margin: 0;
   text-align: center;
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  line-height: 1.25;
+  font-size: clamp(1.05rem, 1.85vw, 1.48rem);
+  line-height: 1.2;
   color: #3a3732;
   text-transform: none;
+  letter-spacing: 0.01em;
 }
 
 .collections-stage {
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: start;
-  gap: clamp(0.9rem, 2vw, 1.25rem);
+  align-items: center;
+  gap: clamp(0.75rem, 1.6vw, 1.05rem);
 }
 
 .collections-side-label {
   margin: 0;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   color: #676158;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   line-height: 1.1;
-  padding-top: 0.4rem;
+  text-transform: none;
+  font-family: var(--latin-font);
+  opacity: 0.9;
 }
 
 .collections-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(0.75rem, 1.5vw, 1.1rem);
+  gap: clamp(0.65rem, 1.1vw, 0.95rem);
 }
 
 .collections-item {
@@ -706,7 +721,7 @@ h3 {
 }
 
 .collections-item-media {
-  aspect-ratio: 5 / 4;
+  aspect-ratio: 4 / 5;
   background: var(--surface-deep);
   overflow: hidden;
 }
@@ -719,21 +734,25 @@ h3 {
 }
 
 .collections-item-title {
-  margin: 0.62rem 0 0.1rem;
+  margin: 0.55rem 0 0.08rem;
   text-align: center;
-  font-size: 0.78rem;
-  letter-spacing: 0.09em;
+  font-size: 0.69rem;
+  letter-spacing: 0.07em;
   color: #3f3b34;
   text-transform: none;
+  line-height: 1.3;
+  font-family: var(--latin-font);
 }
 
 .collections-item-meta {
   margin: 0;
   text-align: center;
-  font-size: 0.72rem;
+  font-size: 0.64rem;
   color: #767165;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   text-transform: none;
+  line-height: 1.35;
+  font-family: var(--latin-font);
 }
 
 .product-tag {
@@ -1425,8 +1444,12 @@ h3 {
   .collections-side-label {
     writing-mode: horizontal-tb;
     transform: none;
-    padding-top: 0;
     text-align: left;
+  }
+
+  .collections-editorial::after {
+    margin-left: 0;
+    width: min(220px, 45%);
   }
 
   .collections-grid {
@@ -1564,6 +1587,11 @@ h3 {
 
   .collections-grid {
     grid-template-columns: 1fr;
+    gap: 0.95rem;
+  }
+
+  .collections-item-media {
+    aspect-ratio: 5 / 4;
   }
 
   .care-note-wrap {
