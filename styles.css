@@ -174,7 +174,11 @@ p {
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
-  background: var(--bg);
+  background-image: url("assets/hero-section-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 .hero-grid {
