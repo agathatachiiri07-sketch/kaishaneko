@@ -651,79 +651,89 @@ h3 {
   gap: 1rem;
 }
 
-@keyframes collections-carousel-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.product-card {
-  background: var(--surface);
-  border: 1px solid var(--line);
-  padding: 1.3rem;
-  min-height: 215px;
-}
-
-.product-card-image {
-  padding: 0;
-  overflow: hidden;
-  aspect-ratio: 5 / 4;
-  min-height: 0;
-}
-
 #collections .container {
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  overflow: hidden;
+  width: min(1160px, 94vw);
+  max-width: none;
+  margin-inline: auto;
 }
 
 #collections.section {
-  padding: 0;
-  border-bottom: 0;
+  padding-top: clamp(3.2rem, 8vh, 6rem);
+  background: var(--bg);
 }
 
-#collections .collections-track {
-  display: flex;
-  flex-wrap: nowrap;
-  width: max-content;
-  gap: 0;
-  animation: none;
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
+.collections-editorial {
+  display: grid;
+  gap: clamp(1.2rem, 2.4vh, 1.8rem);
 }
 
-#collections .collections-track.is-animating {
-  animation: collections-carousel-scroll 52s linear infinite;
+.collections-headline {
+  margin: 0;
+  text-align: center;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  line-height: 1.25;
+  color: #3a3732;
+  text-transform: none;
 }
 
-#collections .collections-track .product-card {
-  flex: 0 0 clamp(240px, 27vw, 32vw);
-  border: 0;
-  background: transparent;
-  padding: 0;
-  min-height: 0;
+.collections-stage {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: clamp(0.9rem, 2vw, 1.25rem);
 }
 
-#collections .product-card-image {
+.collections-side-label {
+  margin: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.82rem;
+  color: #676158;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+  padding-top: 0.4rem;
+}
+
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.75rem, 1.5vw, 1.1rem);
+}
+
+.collections-item {
+  min-width: 0;
+}
+
+.collections-item-media {
   aspect-ratio: 5 / 4;
-  height: auto;
   background: var(--surface-deep);
+  overflow: hidden;
 }
 
-.product-card-image img {
-  display: block;
+.collections-item-media img {
   width: 100%;
   height: 100%;
-  min-height: 0;
+  display: block;
   object-fit: cover;
-  transform: translate3d(0, 0, 0) scale(1);
-  transition: transform 820ms ease, filter 700ms ease;
+}
+
+.collections-item-title {
+  margin: 0.62rem 0 0.1rem;
+  text-align: center;
+  font-size: 0.78rem;
+  letter-spacing: 0.09em;
+  color: #3f3b34;
+  text-transform: none;
+}
+
+.collections-item-meta {
+  margin: 0;
+  text-align: center;
+  font-size: 0.72rem;
+  color: #767165;
+  letter-spacing: 0.04em;
+  text-transform: none;
 }
 
 .product-tag {
@@ -1271,11 +1281,6 @@ h3 {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  #collections .product-card:hover img {
-    transform: translate3d(0, -2px, 0) scale(1.04);
-    filter: saturate(1.04);
-  }
-
   .pricing-row:hover .pricing-cell {
     transform: translateY(-2px);
     box-shadow: 0 10px 24px rgba(56, 50, 41, 0.09);
@@ -1322,11 +1327,6 @@ h3 {
     opacity: 1;
     transform: none;
     filter: none;
-  }
-
-  #collections .collections-track {
-    animation: none !important;
-    transform: none !important;
   }
 
   .hero,
@@ -1417,12 +1417,20 @@ h3 {
     grid-template-columns: 1fr 1fr;
   }
 
-  #collections .product-card-image {
-    aspect-ratio: 5 / 4;
+  .collections-stage {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
   }
 
-  #collections .collections-track .product-card {
-    flex-basis: clamp(220px, 44vw, 360px);
+  .collections-side-label {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .collections-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .process-columns {
@@ -1550,12 +1558,12 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  #collections .product-card-image {
-    aspect-ratio: 5 / 4;
+  .collections-side-label {
+    display: none;
   }
 
-  #collections .collections-track .product-card {
-    flex-basis: clamp(180px, 74vw, 300px);
+  .collections-grid {
+    grid-template-columns: 1fr;
   }
 
   .care-note-wrap {

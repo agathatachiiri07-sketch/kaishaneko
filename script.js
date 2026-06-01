@@ -13,60 +13,9 @@ if (brandLink) {
   });
 }
 
-const collectionsTrack = document.querySelector("#collections .collections-track");
-
-if (collectionsTrack) {
-  const trackImages = Array.from(collectionsTrack.querySelectorAll("img"));
-  let hasStarted = false;
-
-  const startCarousel = () => {
-    if (hasStarted) {
-      return;
-    }
-    hasStarted = true;
-    collectionsTrack.classList.add("is-animating");
-  };
-
-  // Fallback so the infinite loop still starts even if some load events never fire.
-  const forceStartTimer = window.setTimeout(startCarousel, 2200);
-  const finishCarouselSetup = () => {
-    window.clearTimeout(forceStartTimer);
-    startCarousel();
-  };
-
-  if (trackImages.length === 0) {
-    finishCarouselSetup();
-  } else {
-    let pending = 0;
-
-    trackImages.forEach((img) => {
-      if (!img.complete) {
-        pending += 1;
-      }
-    });
-
-    if (pending === 0) {
-      finishCarouselSetup();
-    } else {
-      const onReady = () => {
-        pending -= 1;
-        if (pending <= 0) {
-          finishCarouselSetup();
-        }
-      };
-
-      trackImages.forEach((img) => {
-        if (!img.complete) {
-          img.addEventListener("load", onReady, { once: true });
-          img.addEventListener("error", onReady, { once: true });
-        }
-      });
-    }
-  }
-}
-
 const revealTargets = [
   ".hero-copy",
+  ".collections-editorial",
   ".concept-sheet-section",
   ".pricing-wrap",
   ".size-wrap",
@@ -76,9 +25,9 @@ const revealTargets = [
   "#contact .contact-wrap",
   ".site-footer",
   ".hero-copy > *",
+  ".collections-item",
   ".process-columns > *",
   ".pricing-row",
-  ".size-row",
   ".faq-item",
   ".origin-copy > *",
   ".origin-map-wrap",
@@ -96,9 +45,9 @@ const applyStagger = (selector, stepMs) => {
 };
 
 applyStagger(".hero-copy > *", 110);
+applyStagger(".collections-item", 90);
 applyStagger(".process-columns > *", 95);
 applyStagger(".pricing-row", 70);
-applyStagger(".size-row", 70);
 applyStagger(".faq-item", 90);
 applyStagger(".origin-copy > *", 85);
 applyStagger(".care-note-wrap > *", 120);
