@@ -178,7 +178,6 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-attachment: fixed;
 }
 
 .hero-grid {
@@ -1423,7 +1422,6 @@ h3 {
     padding-top: calc(2.2rem + var(--header-height));
     padding-bottom: 2.8rem;
     margin-top: calc(-1 * var(--header-height));
-    background-attachment: scroll;
   }
 
   .care-note-section {
