@@ -789,16 +789,12 @@ h3 {
   text-align: center;
 }
 
-.collections-editorial::after {
-  content: "";
-  width: min(260px, 32%);
-  height: 1px;
-  background: rgba(122, 116, 106, 0.35);
-  margin-inline: auto;
-}
-
 .collections-headline {
   margin: 0;
+  padding: clamp(0.55rem, 1.5vw, 1rem) 0 clamp(0.75rem, 2vw, 1.25rem);
+  display: grid;
+  justify-items: center;
+  gap: clamp(0.65rem, 1.4vw, 0.95rem);
   text-align: center;
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
   font-size: clamp(1.55rem, 3vw, 2.35rem);
@@ -806,6 +802,13 @@ h3 {
   color: #3a3732;
   text-transform: uppercase;
   letter-spacing: 0.16em;
+}
+
+.collections-headline::after {
+  content: "";
+  width: min(260px, 32vw);
+  height: 1px;
+  background: rgba(122, 116, 106, 0.35);
 }
 
 .collections-instagram-cta {
@@ -1674,11 +1677,6 @@ h3 {
     writing-mode: horizontal-tb;
     transform: none;
     text-align: left;
-  }
-
-  .collections-editorial::after {
-    margin-inline: auto;
-    width: min(220px, 45%);
   }
 
   .collections-item {
