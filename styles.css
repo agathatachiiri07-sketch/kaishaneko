@@ -217,7 +217,8 @@ p {
   transform-origin: center;
   position: relative;
   z-index: 1;
-  animation: hero-image-fade-in 1s ease-out 0.12s both;
+  animation: hero-image-fade-in 1.35s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+  backface-visibility: hidden;
   will-change: opacity, transform;
 }
 
@@ -321,7 +322,8 @@ h3 {
   color: #24211d;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.24);
   transform-origin: left center;
-  animation: hero-title-fade-in 1s ease-out 0.12s both;
+  animation: hero-title-fade-in 1.35s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+  backface-visibility: hidden;
   will-change: opacity, transform;
 }
 
@@ -436,22 +438,22 @@ h3 {
 }
 
 @keyframes hero-title-fade-in {
-  from {
+  0% {
     opacity: 0;
-    transform: translate3d(-1.35rem, 0, 0);
+    transform: translate3d(-0.85rem, 0, 0);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes hero-image-fade-in {
-  from {
+  0% {
     opacity: 0;
-    transform: var(--hero-image-rest) translate3d(-1.35rem, 0, 0);
+    transform: var(--hero-image-rest) translate3d(-0.85rem, 0, 0);
   }
-  to {
+  100% {
     opacity: 1;
     transform: var(--hero-image-rest) translate3d(0, 0, 0);
   }
