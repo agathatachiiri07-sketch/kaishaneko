@@ -1107,6 +1107,10 @@ h3 {
   justify-content: center;
 }
 
+.size-image-wrap + .size-image-wrap {
+  margin-top: clamp(1.1rem, 2.6vw, 2rem);
+}
+
 .size-chart-image {
   width: min(980px, 100%);
   height: auto;
