@@ -217,7 +217,8 @@ p {
   transform-origin: center;
   position: relative;
   z-index: 1;
-  animation: hero-image-fade-in 1.35s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
+  opacity: 0;
+  transform: var(--hero-image-rest) translate3d(-0.85rem, 0, 0);
   backface-visibility: hidden;
   will-change: opacity, transform;
 }
@@ -321,8 +322,9 @@ h3 {
   letter-spacing: 0.12em;
   color: #24211d;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.24);
+  opacity: 0;
+  transform: translate3d(-0.85rem, 0, 0);
   transform-origin: left center;
-  animation: hero-title-fade-in 1.35s cubic-bezier(0.22, 1, 0.36, 1) 0.08s both;
   backface-visibility: hidden;
   will-change: opacity, transform;
 }
@@ -330,6 +332,19 @@ h3 {
 .hero-copy h1 span {
   display: block;
   white-space: nowrap;
+}
+
+.hero:not(.is-ready) .hero-copy h1 {
+  opacity: 0;
+  transform: translate3d(-0.85rem, 0, 0);
+}
+
+.hero.is-ready .hero-copy h1 {
+  animation: hero-title-fade-in 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero.is-ready .hero-visual {
+  animation: hero-image-fade-in 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-divider {

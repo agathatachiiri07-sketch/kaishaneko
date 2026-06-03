@@ -11,19 +11,9 @@
     <link
       rel="preload"
       as="image"
-      href="assets/collections-left-replacement.png"
+      href="assets/hero-requested-image.png"
+      fetchpriority="high"
     />
-    <link
-      rel="preload"
-      as="image"
-      href="assets/collections-middle-replacement.png"
-    />
-    <link
-      rel="preload"
-      as="image"
-      href="assets/collections-added-image.png"
-    />
-    <link rel="preload" as="image" href="assets/collections-carousel-new.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -64,7 +54,15 @@
             </a>
           </div>
           <div class="hero-visual" aria-hidden="true">
-            <img src="assets/hero-requested-image.png" alt="" loading="eager" />
+            <img
+              src="assets/hero-requested-image.png"
+              alt=""
+              width="1024"
+              height="1536"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
           </div>
         </div>
       </section>

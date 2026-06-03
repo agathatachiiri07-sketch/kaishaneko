@@ -13,6 +13,36 @@ if (brandLink) {
   });
 }
 
+
+const hero = document.querySelector(".hero");
+const heroImage = hero?.querySelector(".hero-visual img");
+
+if (hero && heroImage) {
+  let heroReady = false;
+  const markHeroReady = () => {
+    if (heroReady) return;
+    heroReady = true;
+    window.requestAnimationFrame(() => hero.classList.add("is-ready"));
+  };
+
+  const decodeHeroImage = () => {
+    if (typeof heroImage.decode === "function") {
+      heroImage.decode().catch(() => {}).then(markHeroReady);
+      return;
+    }
+    markHeroReady();
+  };
+
+  if (heroImage.complete && heroImage.naturalWidth > 0) {
+    decodeHeroImage();
+  } else {
+    heroImage.addEventListener("load", decodeHeroImage, { once: true });
+    heroImage.addEventListener("error", markHeroReady, { once: true });
+  }
+} else if (hero) {
+  hero.classList.add("is-ready");
+}
+
 const revealTargets = [
   ".hero-copy",
   ".collections-editorial",
