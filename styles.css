@@ -1136,10 +1136,6 @@ h3 {
   content: "本体色";
 }
 
-.pricing-plan-card .pricing-plan-row:nth-of-type(6)::before {
-  content: "割引";
-}
-
 .pricing-plan-row::before {
   display: none;
 }
@@ -1169,29 +1165,6 @@ h3 {
   color: #fff;
   border-radius: 0.62rem 0.62rem 0 0;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
-}
-
-.pricing-plan-badge {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 4rem;
-  aspect-ratio: 1 / 1;
-  transform: translate(-50%, -50%);
-  border-radius: 999px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  background: #c9c1ae;
-  color: #fff;
-  font-size: 1.75rem;
-  line-height: 1;
-  box-shadow: 0 8px 18px rgba(56, 50, 41, 0.12);
-  z-index: 2;
-}
-
-.pricing-plan-card.custom .pricing-plan-badge {
-  background: #827c70;
 }
 
 .pricing-note {
