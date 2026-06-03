@@ -214,11 +214,11 @@ p {
   margin-bottom: -0.95rem;
   --hero-image-rest: translateX(clamp(-0.9rem, -1vw, -0.2rem));
   transform: var(--hero-image-rest);
-  transform-origin: 62% 78%;
+  transform-origin: center;
   position: relative;
   z-index: 1;
-  animation: hero-image-fade-in 1.65s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
-  will-change: opacity, transform, filter;
+  animation: hero-image-fade-in 1s ease-out 0.12s both;
+  will-change: opacity, transform;
 }
 
 .hero-visual img {
@@ -316,8 +316,8 @@ h3 {
   color: #24211d;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.24);
   transform-origin: left center;
-  animation: hero-title-fade-in 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
-  will-change: opacity, transform, filter;
+  animation: hero-title-fade-in 1s ease-out 0.12s both;
+  will-change: opacity, transform;
 }
 
 .hero-copy h1 span {
@@ -431,38 +431,24 @@ h3 {
 }
 
 @keyframes hero-title-fade-in {
-  0% {
+  from {
     opacity: 0;
-    filter: blur(12px);
-    transform: translate3d(-1.4rem, 1.6rem, 0) scale(0.9);
+    transform: translate3d(-1.35rem, 0, 0);
   }
-  58% {
+  to {
     opacity: 1;
-    filter: blur(1px);
-    transform: translate3d(0.18rem, -0.16rem, 0) scale(1.025);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes hero-image-fade-in {
-  0% {
+  from {
     opacity: 0;
-    filter: blur(18px);
-    transform: var(--hero-image-rest) translate3d(3rem, 2rem, 0) scale(0.86);
+    transform: var(--hero-image-rest) translate3d(-1.35rem, 0, 0);
   }
-  64% {
+  to {
     opacity: 1;
-    filter: blur(2px);
-    transform: var(--hero-image-rest) translate3d(-0.28rem, -0.18rem, 0) scale(1.035);
-  }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-    transform: var(--hero-image-rest) translate3d(0, 0, 0) scale(1);
+    transform: var(--hero-image-rest) translate3d(0, 0, 0);
   }
 }
 
