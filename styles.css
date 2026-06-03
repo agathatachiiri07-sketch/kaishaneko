@@ -1031,8 +1031,8 @@ h3 {
   justify-content: center;
   gap: 1rem;
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
-  font-size: clamp(1.55rem, 3.5vw, 2.55rem);
-  letter-spacing: 0.08em;
+  font-size: clamp(1.9rem, 4.2vw, 3.25rem);
+  letter-spacing: 0.12em;
   color: #2e2d2a;
   padding-block: clamp(0.3rem, 0.9vh, 0.65rem);
 }
@@ -1049,82 +1049,159 @@ h3 {
 }
 
 .pricing-subtitle {
-  margin: 0.4rem 0 1.9rem;
+  margin: 0.2rem 0 clamp(1rem, 2vw, 1.45rem);
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.92rem;
   letter-spacing: 0.16em;
   color: #9a8d76;
   font-weight: 600;
 }
 
-.pricing-table {
-  display: grid;
-  gap: 0.75rem;
-}
-
-.pricing-row {
-  display: grid;
-  grid-template-columns: minmax(180px, 0.95fr) minmax(220px, 1fr) minmax(220px, 1fr);
-  gap: 0.75rem;
-}
-
-.pricing-cell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pricing-intro {
+  margin: 0 auto clamp(2.1rem, 4.8vw, 3.4rem);
+  max-width: 760px;
   text-align: center;
-  padding: 0.95rem 1rem;
-  border: 1px solid var(--line);
-  background: var(--surface);
-  color: var(--text);
-  line-height: 1.45;
-  transition: transform 320ms ease, box-shadow 320ms ease;
+  color: #666259;
+  font-size: clamp(0.92rem, 1.18vw, 1.04rem);
+  line-height: 1.85;
+  letter-spacing: 0.05em;
 }
 
-.pricing-label {
-  background: #e4dfda;
-  color: #3f3b35;
+.pricing-comparison {
+  display: grid;
+  grid-template-columns: minmax(210px, 0.72fr) minmax(260px, 1fr) minmax(260px, 1fr);
+  align-items: end;
+  gap: clamp(1rem, 2.5vw, 2rem);
+}
+
+.pricing-feature-list {
+  align-self: end;
+  margin-bottom: 0;
+  border-radius: 0.45rem;
+  background: rgba(228, 223, 216, 0.66);
+  padding: clamp(0.8rem, 1.7vw, 1.15rem);
+}
+
+.pricing-feature-item,
+.pricing-plan-row {
+  min-height: 4.05rem;
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.8rem clamp(0.45rem, 1.1vw, 0.85rem);
+  border-bottom: 1px solid rgba(134, 120, 95, 0.22);
+  color: #3d3932;
+}
+
+.pricing-feature-item:last-child,
+.pricing-plan-row:last-child {
+  border-bottom: 0;
+}
+
+.pricing-feature-icon,
+.pricing-row-icon {
+  width: 2.1rem;
+  aspect-ratio: 1 / 1;
+  display: inline-grid;
+  place-items: center;
+  color: #777167;
+  font-family: var(--latin-font);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.pricing-feature-item span:last-child,
+.pricing-plan-row strong,
+.pricing-plan-row span:last-child {
+  font-size: clamp(0.92rem, 1.1vw, 1rem);
+  line-height: 1.7;
   font-weight: 600;
-  letter-spacing: 0.03em;
-}
-
-.pricing-empty {
-  border-color: transparent;
-  background: transparent;
-}
-
-.pricing-plan {
-  color: var(--text);
-  font-weight: 700;
   letter-spacing: 0.04em;
 }
 
-.pricing-plan.regular {
-  background: #ffffff;
-  border-color: var(--line);
+.pricing-plan-card .pricing-plan-row:nth-of-type(2)::before {
+  content: "発送目安";
 }
 
-.pricing-plan.custom {
-  background: #8f8a81;
-  border-color: #8f8a81;
+.pricing-plan-card .pricing-plan-row:nth-of-type(3)::before {
+  content: "価格";
+}
+
+.pricing-plan-card .pricing-plan-row:nth-of-type(4)::before {
+  content: "デザイン";
+}
+
+.pricing-plan-card .pricing-plan-row:nth-of-type(5)::before {
+  content: "本体色";
+}
+
+.pricing-plan-card .pricing-plan-row:nth-of-type(6)::before {
+  content: "割引";
+}
+
+.pricing-plan-row::before {
+  display: none;
+}
+
+.pricing-plan-card {
+  position: relative;
+  border: 1px solid rgba(134, 120, 95, 0.28);
+  border-radius: 0.7rem;
+  background: rgba(252, 252, 251, 0.72);
+  overflow: visible;
+}
+
+.pricing-plan-card h3 {
+  min-height: 5.2rem;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  border-bottom: 1px solid rgba(134, 120, 95, 0.22);
+  font-size: clamp(1.12rem, 1.8vw, 1.45rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #3a3732;
+}
+
+.pricing-plan-card.custom h3 {
+  background: #827c70;
   color: #fff;
+  border-radius: 0.62rem 0.62rem 0 0;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.18);
 }
 
-.pricing-value {
-  font-size: 1.05rem;
-  font-weight: 600;
+.pricing-plan-badge {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: #c9c1ae;
+  color: #fff;
+  font-size: 1.75rem;
+  line-height: 1;
+  box-shadow: 0 8px 18px rgba(56, 50, 41, 0.12);
+  z-index: 2;
 }
 
-.pricing-copy {
-  color: var(--muted);
-  font-size: 0.95rem;
+.pricing-plan-card.custom .pricing-plan-badge {
+  background: #827c70;
 }
 
 .pricing-note {
-  margin: 1rem 0 0;
+  margin: clamp(1.3rem, 2.8vw, 1.8rem) 0 0;
+  padding: 0.85rem 1rem;
   text-align: center;
   color: var(--muted);
+  background: rgba(228, 223, 216, 0.6);
   font-size: 0.9rem;
+  letter-spacing: 0.04em;
 }
 
 .size-section {
@@ -1578,11 +1655,6 @@ h3 {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .pricing-row:hover .pricing-cell {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(56, 50, 41, 0.09);
-  }
-
   .faq-item:hover {
     transform: translateY(-3px);
     box-shadow: 0 12px 28px rgba(55, 49, 40, 0.12);
@@ -1638,18 +1710,35 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .pricing-row {
+  .pricing-comparison {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
+    gap: clamp(1.8rem, 4vw, 2.4rem);
+    max-width: 680px;
+    margin-inline: auto;
   }
 
-  .pricing-empty {
+  .pricing-feature-list {
     display: none;
   }
 
-  .pricing-label {
-    justify-content: flex-start;
-    text-align: left;
+  .pricing-plan-card {
+    width: 100%;
+  }
+
+  .pricing-plan-row {
+    grid-template-columns: 2.4rem minmax(5.8rem, 0.45fr) minmax(0, 1fr);
+  }
+
+  .pricing-plan-row::before {
+    display: block;
+    grid-column: 2;
+    color: #9a8d76;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+
+  .pricing-plan-row > :last-child {
+    grid-column: 3;
   }
 
   .faq-wrap {
