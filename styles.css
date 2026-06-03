@@ -1410,9 +1410,9 @@ h3 {
 
 .care-note-wrap {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) minmax(360px, 0.72fr);
+  grid-template-columns: auto minmax(260px, 0.62fr) minmax(520px, 1.25fr);
   align-items: center;
-  gap: clamp(1.2rem, 3vw, 2.6rem);
+  gap: clamp(1.1rem, 2.6vw, 2.2rem);
   border: 0;
   background: transparent;
   padding: 0;
@@ -1431,9 +1431,13 @@ h3 {
   animation: icon-breathe 5.8s ease-in-out infinite;
 }
 
+.care-note-copy {
+  max-width: 34rem;
+}
+
 .care-note-copy h3 {
   margin: 0 0 0.6rem;
-  font-size: clamp(1.2rem, 2.3vw, 1.8rem);
+  font-size: clamp(1.08rem, 1.8vw, 1.5rem);
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
   letter-spacing: 0.02em;
   color: #2f2d29;
@@ -1443,24 +1447,24 @@ h3 {
   margin: 0;
   color: #666259;
   line-height: 1.75;
-  font-size: clamp(0.92rem, 1.15vw, 1.06rem);
+  font-size: clamp(0.88rem, 1vw, 0.98rem);
 }
 
 .care-biography {
   justify-self: end;
   display: grid;
-  grid-template-columns: minmax(170px, 0.68fr) minmax(0, 1fr);
+  grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1fr);
   align-items: center;
-  gap: clamp(1.15rem, 2.4vw, 1.8rem);
-  width: min(520px, 100%);
-  padding-left: clamp(1.1rem, 2.6vw, 1.8rem);
+  gap: clamp(1.35rem, 2.8vw, 2.2rem);
+  width: min(720px, 100%);
+  padding-left: clamp(1.4rem, 3vw, 2.4rem);
   border-left: 1px solid rgba(107, 103, 96, 0.22);
   background: transparent;
 }
 
 .care-biography-image {
   aspect-ratio: 4 / 5;
-  min-height: 230px;
+  min-height: 300px;
   background: transparent;
   border: 1px dashed rgba(107, 103, 96, 0.34);
 }
@@ -1887,7 +1891,7 @@ h3 {
   .care-biography {
     grid-column: 2;
     justify-self: start;
-    width: min(680px, 100%);
+    width: min(760px, 100%);
     padding-left: 0;
     padding-top: clamp(1.2rem, 3vw, 1.8rem);
     border-left: 0;
@@ -2009,6 +2013,10 @@ h3 {
 
   .care-note-copy h3 {
     font-size: clamp(1.05rem, 5vw, 1.35rem);
+  }
+
+  .care-note-copy {
+    max-width: 100%;
   }
 
   .care-note-copy p {
