@@ -813,18 +813,55 @@ h3 {
   margin: 0;
   text-align: center;
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
-  font-size: clamp(1.05rem, 1.85vw, 1.48rem);
-  line-height: 1.2;
+  font-size: clamp(1.55rem, 3vw, 2.35rem);
+  line-height: 1;
   color: #3a3732;
-  text-transform: none;
-  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.collections-instagram-cta {
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0.1rem auto 0;
+  padding: 0.7rem 1.15rem;
+  border: 1px solid rgba(163, 119, 66, 0.42);
+  border-radius: 999px;
+  color: #3a3732;
+  background: rgba(252, 252, 251, 0.52);
+  box-shadow: 0 8px 18px rgba(56, 50, 41, 0.08);
+  font-family: var(--latin-font);
+  font-size: 0.78rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 240ms ease, box-shadow 240ms ease, background 240ms ease;
+}
+
+.collections-instagram-cta:hover {
+  transform: translateY(-2px);
+  background: rgba(252, 252, 251, 0.78);
+  box-shadow: 0 12px 24px rgba(56, 50, 41, 0.12);
+}
+
+.collections-instagram-cta svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.collections-instagram-cta svg * {
+  fill: none;
 }
 
 .collections-stage {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: clamp(0.75rem, 1.6vw, 1.05rem);
+  display: block;
+  margin-top: clamp(0.6rem, 1.8vw, 1.2rem);
+  overflow: hidden;
 }
 
 .collections-side-label {
@@ -841,13 +878,40 @@ h3 {
 }
 
 .collections-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(0.65rem, 1.1vw, 0.95rem);
+  display: flex;
+  gap: clamp(0.75rem, 1.5vw, 1.15rem);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-padding-inline: 0.2rem;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.2rem 0.2rem 0.9rem;
+  scrollbar-color: rgba(122, 116, 106, 0.45) transparent;
+  scrollbar-width: thin;
+}
+
+.collections-grid:focus-visible {
+  outline: 1px solid rgba(163, 119, 66, 0.58);
+  outline-offset: 0.35rem;
+}
+
+.collections-grid::-webkit-scrollbar {
+  height: 0.42rem;
+}
+
+.collections-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.collections-grid::-webkit-scrollbar-thumb {
+  background: rgba(122, 116, 106, 0.36);
+  border-radius: 999px;
 }
 
 .collections-item {
+  flex: 0 0 clamp(230px, 25vw, 300px);
   min-width: 0;
+  scroll-snap-align: start;
 }
 
 .collections-item-media {
@@ -1590,8 +1654,7 @@ h3 {
   }
 
   .collections-stage {
-    grid-template-columns: 1fr;
-    gap: 0.7rem;
+    margin-top: 0.9rem;
   }
 
   .collections-side-label {
@@ -1605,8 +1668,8 @@ h3 {
     width: min(220px, 45%);
   }
 
-  .collections-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .collections-item {
+    flex-basis: clamp(220px, 42vw, 300px);
   }
 
   .process-columns {
@@ -1761,12 +1824,12 @@ h3 {
   }
 
   .collections-grid {
-    grid-template-columns: 1fr;
     gap: 0.95rem;
+    padding-bottom: 0.85rem;
   }
 
-  .collections-item-media {
-    aspect-ratio: 5 / 4;
+  .collections-item {
+    flex-basis: min(76vw, 300px);
   }
 
   .care-note-wrap {
