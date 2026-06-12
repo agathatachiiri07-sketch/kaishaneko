@@ -1496,9 +1496,23 @@ h3 {
   color: #2f2d29;
 }
 
-.care-biography-copy p:last-child {
-  font-size: clamp(0.95rem, 1.16vw, 1.06rem);
-  line-height: 1.78;
+.care-biography-copy p {
+  margin: 0;
+  font-size: clamp(0.9rem, 1.02vw, 0.98rem);
+  line-height: 1.82;
+}
+
+.care-biography-copy p + p {
+  margin-top: 0.8rem;
+}
+
+.care-biography-statement {
+  margin-top: 1rem !important;
+  color: #2f2d29;
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
+  font-size: clamp(1rem, 1.24vw, 1.12rem) !important;
+  font-weight: 500;
+  letter-spacing: 0.08em;
 }
 
 .origin-grid {
