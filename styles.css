@@ -1453,10 +1453,10 @@ h3 {
 .care-biography {
   justify-self: end;
   display: grid;
-  grid-template-columns: minmax(220px, 0.78fr) minmax(0, 1fr);
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(1.35rem, 2.8vw, 2.2rem);
-  width: min(720px, 100%);
+  width: min(820px, 100%);
   padding-left: clamp(1.4rem, 3vw, 2.4rem);
   border-left: 1px solid rgba(107, 103, 96, 0.22);
   background: transparent;
@@ -1464,11 +1464,9 @@ h3 {
 
 .care-biography-image {
   width: 100%;
-  aspect-ratio: 4 / 5;
-  min-height: 300px;
+  height: auto;
   display: block;
-  object-fit: cover;
-  object-position: center center;
+  object-fit: contain;
   border: 1px solid rgba(107, 103, 96, 0.24);
   background: var(--surface);
 }
@@ -2056,7 +2054,7 @@ h3 {
   }
 
   .care-biography-image {
-    width: min(300px, 76vw);
+    width: min(520px, 100%);
   }
 
   .care-biography-copy {
