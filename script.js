@@ -52,7 +52,6 @@ const revealTargets = [
   ".origin-grid",
   ".faq-wrap",
   ".care-note-wrap",
-  "#contact .contact-wrap",
   ".site-footer",
   ".hero-copy > *",
   ".collections-item",
@@ -62,7 +61,6 @@ const revealTargets = [
   ".origin-copy > *",
   ".origin-map-wrap",
   ".care-note-wrap > *",
-  "#contact .contact-wrap > *",
 ].flatMap((selector) => Array.from(document.querySelectorAll(selector)));
 
 const uniqueRevealTargets = Array.from(new Set(revealTargets));

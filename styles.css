@@ -247,10 +247,6 @@ p {
 #about .about-list li,
 #faq summary,
 #faq .faq-answer,
-#contact .eyebrow,
-#contact h2,
-#contact p,
-#contact .text-cta,
 .collections-headline,
 .collections-instagram-cta,
 .origin-kicker,
@@ -1383,17 +1379,6 @@ h3 {
   max-width: 65ch;
 }
 
-.contact-section {
-  background: var(--bg);
-}
-
-.contact-wrap {
-  max-width: 720px;
-  border: 0;
-  background: var(--surface);
-  padding: clamp(1.2rem, 2.2vw, 1.8rem);
-}
-
 .origin-section {
   background: var(--bg);
 }
@@ -1591,6 +1576,20 @@ h3 {
   display: flex;
   align-items: center;
   gap: 1.05rem;
+}
+
+.footer-email {
+  color: #6d685f;
+  font-family: var(--latin-font);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  transition: color 220ms ease, opacity 220ms ease;
+}
+
+.footer-email:hover {
+  color: var(--text);
+  opacity: 0.88;
 }
 
 .footer-instagram {
