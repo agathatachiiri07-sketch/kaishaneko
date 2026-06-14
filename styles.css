@@ -32,6 +32,7 @@ body {
   background: var(--bg);
   line-height: 1.7;
   text-transform: uppercase;
+  overflow-x: hidden;
 }
 
 h1,
@@ -1822,6 +1823,10 @@ h3 {
     white-space: normal;
   }
 
+  .hero-subtext {
+    text-align: center;
+  }
+
   .story-visual {
     min-height: 320px;
   }
@@ -1892,10 +1897,6 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .care-note-wrap {
-    grid-template-columns: auto 1fr;
-    gap: 1rem;
-  }
 
   .origin-copy {
     max-width: 680px;
@@ -1923,24 +1924,35 @@ h3 {
 
   .header-inner {
     padding: 1rem 0;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
+    gap: 0.85rem;
   }
 
   .header-actions {
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 0.7rem;
   }
 
   .main-nav {
-    gap: 0.8rem;
+    width: 100%;
+    justify-content: center;
+    gap: 0.72rem 0.9rem;
     flex-wrap: wrap;
   }
 
+  .main-nav a {
+    font-size: 0.78rem;
+  }
+
+  .main-nav .order-now-btn {
+    padding: 0.62rem 1rem;
+  }
+
   .brand img {
-    height: 3rem;
+    height: 2.75rem;
   }
 
   .hero {
@@ -1948,16 +1960,20 @@ h3 {
   }
 
   .hero-grid {
-    width: min(100% - 2rem, 480px);
+    width: min(100% - 2rem, 520px);
+    justify-items: center;
   }
 
   .hero-copy {
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 100%;
   }
 
   .hero-copy h1 {
-    font-size: clamp(2.15rem, 11vw, 3rem);
-    letter-spacing: 0.085em;
+    font-size: clamp(2rem, 10vw, 2.85rem);
+    letter-spacing: 0.07em;
+    text-align: center;
   }
 
   .hero-subtext span {
@@ -1966,6 +1982,11 @@ h3 {
 
   .hero .hero-cta {
     min-width: min(12.4rem, 100%);
+    align-self: center;
+  }
+
+  .hero-visual {
+    width: min(340px, 78vw);
   }
 
   .faq-accordion {
@@ -1988,6 +2009,37 @@ h3 {
   .faq-answer {
     font-size: 0.93rem;
     padding: 0 0.95rem 0.95rem;
+  }
+
+  .pricing-comparison {
+    max-width: 100%;
+    gap: 1.45rem;
+  }
+
+  .pricing-plan-card h3 {
+    min-height: 4.3rem;
+    padding: 0.9rem 0.75rem;
+    text-align: center;
+  }
+
+  .pricing-plan-row {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.55rem;
+    padding: 0.75rem 0.7rem;
+  }
+
+  .pricing-plan-row::before {
+    grid-column: 2;
+    margin-bottom: 0.1rem;
+  }
+
+  .pricing-plan-row > :last-child {
+    grid-column: 2;
+  }
+
+  .pricing-row-icon {
+    width: 1.8rem;
+    font-size: 1.12rem;
   }
 
   .product-grid {
@@ -2013,6 +2065,7 @@ h3 {
     text-align: center;
     width: min(760px, 100%);
     margin-inline: auto;
+    gap: clamp(1.4rem, 6vw, 2.2rem);
   }
 
   .care-biography-images {
@@ -2030,6 +2083,12 @@ h3 {
 
   .care-biography-copy {
     max-width: 100%;
+    text-align: left;
+  }
+
+  .care-biography-name,
+  .care-biography-name-en,
+  .care-biography h4 {
     text-align: center;
   }
 
@@ -2125,10 +2184,28 @@ h3 {
 
   .footer-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
   }
 
   .footer-meta {
-    gap: 0.9rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 0.9rem;
+  }
+
+  .footer-email {
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .footer-social {
+    width: 2.75rem;
+  }
+
+  .footer-social svg {
+    width: 1.55rem;
+    height: 1.55rem;
   }
 }
