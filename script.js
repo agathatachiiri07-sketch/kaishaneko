@@ -38,6 +38,7 @@ if (hero && heroImage) {
   } else {
     heroImage.addEventListener("load", decodeHeroImage, { once: true });
     heroImage.addEventListener("error", markHeroReady, { once: true });
+    window.setTimeout(markHeroReady, 1200);
   }
 } else if (hero) {
   hero.classList.add("is-ready");
