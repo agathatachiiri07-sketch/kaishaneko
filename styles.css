@@ -1394,9 +1394,9 @@ h3 {
 
 .care-biography {
   display: grid;
-  grid-template-columns: minmax(360px, 0.95fr) minmax(0, 1.05fr);
-  align-items: center;
-  gap: clamp(1.6rem, 4vw, 3.5rem);
+  grid-template-columns: minmax(320px, 0.9fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(2rem, 4.8vw, 4rem);
   width: min(1160px, 100%);
   margin-inline: auto;
   background: transparent;
@@ -1404,7 +1404,10 @@ h3 {
 
 .care-biography-images {
   display: grid;
-  gap: clamp(0.9rem, 2vw, 1.35rem);
+  justify-items: start;
+  align-self: start;
+  gap: clamp(0.75rem, 1.8vw, 1.15rem);
+  padding-top: 0.35rem;
 }
 
 .care-biography-image {
@@ -1416,7 +1419,17 @@ h3 {
   background: var(--surface);
 }
 
+.care-biography-image:first-child {
+  width: 92%;
+}
+
+.care-biography-image:last-child {
+  width: 82%;
+  justify-self: end;
+}
+
 .care-biography-copy {
+  max-width: 62ch;
   text-align: left;
 }
 
@@ -1958,13 +1971,19 @@ h3 {
 
   .care-biography-images {
     width: min(620px, 100%);
+    justify-items: center;
+    padding-top: 0;
   }
 
-  .care-biography-image {
+  .care-biography-image,
+  .care-biography-image:first-child,
+  .care-biography-image:last-child {
     width: 100%;
+    justify-self: center;
   }
 
   .care-biography-copy {
+    max-width: 100%;
     text-align: center;
   }
 
