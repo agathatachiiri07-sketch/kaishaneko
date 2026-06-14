@@ -1433,13 +1433,23 @@ h3 {
 }
 
 .care-biography-name {
-  margin: 0 0 0.95rem;
+  margin: 0 0 0.4rem;
   font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
   font-size: clamp(2rem, 3.6vw, 3rem) !important;
   font-weight: 500;
   line-height: 1.16 !important;
   letter-spacing: 0.12em;
   color: #2f2d29;
+}
+
+.care-biography-name-en {
+  margin: 0 0 1.05rem;
+  color: #9a8d76;
+  font-family: var(--latin-font);
+  font-size: clamp(0.78rem, 1vw, 0.92rem);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  line-height: 1.2;
 }
 
 .care-biography h4 {
