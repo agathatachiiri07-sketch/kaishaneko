@@ -1394,12 +1394,17 @@ h3 {
 
 .care-biography {
   display: grid;
-  grid-template-columns: minmax(360px, 0.9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(360px, 0.95fr) minmax(0, 1.05fr);
   align-items: center;
   gap: clamp(1.6rem, 4vw, 3.5rem);
   width: min(1160px, 100%);
   margin-inline: auto;
   background: transparent;
+}
+
+.care-biography-images {
+  display: grid;
+  gap: clamp(0.9rem, 2vw, 1.35rem);
 }
 
 .care-biography-image {
@@ -1951,8 +1956,12 @@ h3 {
     margin-inline: auto;
   }
 
+  .care-biography-images {
+    width: min(620px, 100%);
+  }
+
   .care-biography-image {
-    width: min(520px, 100%);
+    width: 100%;
   }
 
   .care-biography-copy {
