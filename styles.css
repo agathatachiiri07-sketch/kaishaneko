@@ -1598,7 +1598,7 @@ h3 {
   opacity: 0.88;
 }
 
-.footer-instagram {
+.footer-social {
   width: 3.35rem;
   aspect-ratio: 1 / 1;
   border: 0;
@@ -1611,7 +1611,7 @@ h3 {
   transition: color 220ms ease, transform 220ms ease, opacity 220ms ease;
 }
 
-.footer-instagram:hover {
+.footer-social:hover {
   color: var(--text);
   transform: translateY(-1px);
   opacity: 0.88;
@@ -1629,7 +1629,7 @@ h3 {
 
 }
 
-.footer-instagram svg {
+.footer-social svg {
   width: 1.85rem;
   height: 1.85rem;
   fill: none;
@@ -1637,7 +1637,7 @@ h3 {
   stroke-width: 1.7;
 }
 
-.footer-instagram svg * {
+.footer-social svg * {
   fill: none;
 }
 
