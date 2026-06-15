@@ -1373,10 +1373,7 @@ h3 {
 
 .faq-answer span {
   display: block;
-}
-
-.faq-answer span + span {
-  margin-top: 0.3rem;
+  white-space: nowrap;
 }
 
 .origin-section {
@@ -1781,6 +1778,10 @@ h3 {
 
   .faq-answer {
     padding: 1rem 1.35rem 1.35rem;
+  }
+
+  .faq-answer span {
+    white-space: normal;
   }
 
   .hero {
