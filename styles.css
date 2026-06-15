@@ -1369,7 +1369,11 @@ h3 {
   color: var(--muted);
   line-height: 1.7;
   font-size: 0.98rem;
-  max-width: 65ch;
+}
+
+.faq-answer span {
+  display: block;
+  white-space: nowrap;
 }
 
 .origin-section {
@@ -1774,6 +1778,10 @@ h3 {
 
   .faq-answer {
     padding: 0 1.15rem 1.1rem;
+  }
+
+  .faq-answer span {
+    white-space: normal;
   }
 
   .hero {
