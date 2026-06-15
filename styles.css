@@ -1373,7 +1373,10 @@ h3 {
 
 .faq-answer span {
   display: block;
-  white-space: nowrap;
+}
+
+.faq-answer span + span {
+  margin-top: 0.3rem;
 }
 
 .origin-section {
@@ -1780,10 +1783,6 @@ h3 {
     padding: 1rem 1.35rem 1.35rem;
   }
 
-  .faq-answer span {
-    white-space: normal;
-  }
-
   .hero {
     min-height: auto;
     padding-top: calc(2.2rem + var(--header-height));
@@ -2040,7 +2039,12 @@ h3 {
 
   .faq-answer {
     font-size: 0.93rem;
+    line-height: 1.8;
     padding: 0.9rem 1.15rem 1.2rem;
+  }
+
+  .faq-answer span {
+    overflow-wrap: anywhere;
   }
 
   .pricing-comparison {
