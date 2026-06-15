@@ -1264,7 +1264,7 @@ h3 {
 }
 
 .faq-wrap {
-  width: min(860px, 96vw);
+  width: min(960px, 96vw);
 }
 
 .faq-title {
@@ -1302,9 +1302,9 @@ h3 {
 }
 
 .faq-accordion {
-  margin-top: 0.9rem;
+  margin-top: 1.15rem;
   display: grid;
-  gap: 0.9rem;
+  gap: 1.35rem;
 }
 
 .faq-item {
@@ -1330,8 +1330,8 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.8rem;
-  padding: 1.1rem 1.5rem;
+  gap: 1rem;
+  padding: 1.35rem 1.85rem;
   font-size: clamp(1rem, 1.6vw, 1.2rem);
   color: var(--text);
   font-weight: 500;
@@ -1365,15 +1365,18 @@ h3 {
 }
 
 .faq-answer {
-  padding: 0 1.5rem 1.25rem;
+  padding: 1.15rem 1.85rem 1.55rem;
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.85;
   font-size: 0.98rem;
 }
 
 .faq-answer span {
   display: block;
-  white-space: nowrap;
+}
+
+.faq-answer span + span {
+  margin-top: 0.3rem;
 }
 
 .origin-section {
@@ -1755,7 +1758,7 @@ h3 {
   }
 
   .faq-wrap {
-    width: min(760px, 94vw);
+    width: min(820px, 94vw);
   }
 
   .faq-title {
@@ -1773,15 +1776,11 @@ h3 {
   }
 
   .faq-item summary {
-    padding: 1rem 1.15rem;
+    padding: 1.15rem 1.35rem;
   }
 
   .faq-answer {
-    padding: 0 1.15rem 1.1rem;
-  }
-
-  .faq-answer span {
-    white-space: normal;
+    padding: 1rem 1.35rem 1.35rem;
   }
 
   .hero {
@@ -2022,7 +2021,7 @@ h3 {
   }
 
   .faq-accordion {
-    gap: 0.7rem;
+    gap: 1rem;
   }
 
   .faq-item {
@@ -2031,7 +2030,7 @@ h3 {
 
   .faq-item summary {
     font-size: 0.96rem;
-    padding: 0.88rem 0.95rem;
+    padding: 1rem 1.15rem;
   }
 
   .faq-icon {
@@ -2040,7 +2039,7 @@ h3 {
 
   .faq-answer {
     font-size: 0.93rem;
-    padding: 0 0.95rem 0.95rem;
+    padding: 0.9rem 1.15rem 1.2rem;
   }
 
   .pricing-comparison {
