@@ -1865,7 +1865,9 @@ h3 {
     margin-top: 0.35rem;
   }
 
-  .process-arrow {
+  .process-arrow,
+  .process-arrow.reveal,
+  .process-arrow.reveal.is-visible {
     transform: rotate(90deg);
   }
 
