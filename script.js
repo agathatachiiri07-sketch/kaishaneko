@@ -53,7 +53,6 @@ const revealTargets = [
   ".origin-grid",
   ".faq-wrap",
   ".care-note-wrap",
-  ".about-wrap",
   ".site-footer",
   ".hero-copy > *",
   ".collections-item",
@@ -63,7 +62,6 @@ const revealTargets = [
   ".origin-copy > *",
   ".origin-map-wrap",
   ".care-note-wrap > *",
-  ".about-card",
 ].flatMap((selector) => Array.from(document.querySelectorAll(selector)));
 
 const uniqueRevealTargets = Array.from(new Set(revealTargets));
@@ -82,7 +80,6 @@ applyStagger(".pricing-row", 70);
 applyStagger(".faq-item", 90);
 applyStagger(".origin-copy > *", 85);
 applyStagger(".care-note-wrap > *", 120);
-applyStagger(".about-card", 100);
 
 if (uniqueRevealTargets.length > 0) {
   uniqueRevealTargets.forEach((el) => {

@@ -242,8 +242,10 @@ p {
 .pricing-subtitle,
 .faq-subtitle,
 .size-subtitle,
-.about-subtitle,
-.about-card p,
+#about .eyebrow,
+#about h2,
+#about p,
+#about .about-list li,
 #faq summary,
 #faq .faq-answer,
 .collections-headline,
@@ -1226,75 +1228,35 @@ h3 {
   background: var(--surface);
 }
 
-.about-section {
-  background: var(--surface-deep);
-}
-
-.about-wrap {
-  width: min(960px, 96vw);
-}
-
-.about-title {
-  margin: clamp(0.9rem, 2.2vh, 1.6rem) 0 clamp(0.6rem, 1.8vh, 1rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
-  font-size: clamp(1.55rem, 3.5vw, 2.55rem);
-  letter-spacing: 0.08em;
-  color: #2e2d2a;
-  font-weight: 500;
-  padding-block: clamp(0.3rem, 0.9vh, 0.65rem);
-}
-
-.about-title span {
-  width: clamp(3.2rem, 8vw, 8rem);
-  height: 2px;
-  background: rgba(134, 120, 95, 0.4);
-  animation: title-rule-glow 4.8s ease-in-out infinite;
-}
-
-.about-title span:last-child {
-  animation-delay: 0.7s;
-}
-
-.about-subtitle {
-  margin: 0.4rem 0 1.9rem;
-  text-align: center;
-  font-size: 0.85rem;
-  letter-spacing: 0.16em;
-  color: #9a8d76;
-  font-weight: 600;
-}
-
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1.2rem, 2.4vw, 1.8rem);
+  grid-template-columns: 1fr 0.9fr;
+  gap: 1.3rem;
   align-items: start;
 }
 
-.about-card {
+.about-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   border: 1px solid var(--line);
   background: var(--surface);
-  padding: clamp(1.35rem, 2.4vw, 1.85rem);
 }
 
-.about-card h3 {
-  margin: 0 0 clamp(1rem, 2vw, 1.35rem);
-  font-family: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", Georgia, serif;
-  font-size: clamp(1.05rem, 1.45vw, 1.25rem);
-  font-weight: 500;
-  line-height: 1.55;
-  letter-spacing: 0.04em;
-  color: #2f2d29;
+.about-grid > div {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: clamp(1.1rem, 2vw, 1.5rem);
 }
 
-.about-card p {
-  font-size: clamp(0.92rem, 1.04vw, 1rem);
-  line-height: 1.9;
-  text-transform: none;
+.about-list li {
+  padding: 1rem 1.1rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.about-list li:last-child {
+  border-bottom: 0;
 }
 
 .faq-section {
@@ -1797,24 +1759,6 @@ h3 {
 
   .faq-wrap {
     width: min(820px, 94vw);
-  }
-
-  .about-wrap {
-    width: min(820px, 94vw);
-  }
-
-  .about-title {
-    font-size: clamp(1.3rem, 6.2vw, 1.9rem);
-    letter-spacing: 0.04em;
-    gap: 0.65rem;
-  }
-
-  .about-title span {
-    width: 2.2rem;
-  }
-
-  .about-subtitle {
-    margin-bottom: 1.25rem;
   }
 
   .faq-title {
