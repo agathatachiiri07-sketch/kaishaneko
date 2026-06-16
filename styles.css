@@ -911,6 +911,8 @@ h3 {
 
 .collections-stage {
   display: block;
+  width: 100%;
+  max-width: 100%;
   margin-top: clamp(0.6rem, 1.8vw, 1.2rem);
   overflow: hidden;
 }
@@ -1904,10 +1906,27 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .origin-copy h2 {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .origin-subtext {
+    text-align: center;
+  }
+
+  .origin-subtext span {
+    white-space: normal;
+  }
 
   .origin-copy {
     max-width: 680px;
     margin: 0 auto;
+    text-align: center;
+  }
+
+  .origin-en {
+    text-align: center;
   }
 
   .origin-map-wrap {
@@ -1937,6 +1956,32 @@ h3 {
     padding-block: clamp(2.2rem, 7vh, 4rem);
   }
 
+
+  .site-header .container {
+    width: min(100% - 1.25rem, 1160px);
+  }
+
+  #collections .container {
+    width: min(100% - 1.25rem, 1160px);
+    overflow-x: clip;
+  }
+
+  .collections-editorial {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  .collections-stage {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .collections-grid {
+    width: 100%;
+    max-width: 100%;
+  }
 
   .header-inner {
     padding: 1rem 0;
@@ -1993,6 +2038,10 @@ h3 {
     font-size: clamp(2rem, 10vw, 2.85rem);
     letter-spacing: 0.07em;
     text-align: center;
+  }
+
+  .hero-copy h1 span {
+    white-space: normal;
   }
 
   .hero-subtext span {
@@ -2220,11 +2269,13 @@ h3 {
 
   .origin-copy h2 {
     font-size: clamp(1.25rem, 6.2vw, 1.75rem);
-    white-space: nowrap;
+    white-space: normal;
+    line-height: 1.45;
+    text-align: center;
   }
 
   .origin-subtext span {
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .origin-map-image {
