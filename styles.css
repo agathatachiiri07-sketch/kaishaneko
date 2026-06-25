@@ -1175,16 +1175,8 @@ h3 {
   letter-spacing: 0.04em;
 }
 
-.pricing-image-wrap {
-  margin: clamp(1.8rem, 3.5vw, 2.6rem) 0 0;
-  display: flex;
-  justify-content: center;
-}
-
-.pricing-chart-image {
-  width: min(980px, 100%);
-  height: auto;
-  display: block;
+.pricing-note + .pricing-note {
+  margin-top: 0.75rem;
 }
 
 .size-section {
