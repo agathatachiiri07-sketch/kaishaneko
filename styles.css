@@ -1067,7 +1067,7 @@ h3 {
 
 .pricing-comparison {
   display: grid;
-  grid-template-columns: minmax(210px, 0.72fr) minmax(260px, 1fr) minmax(260px, 1fr);
+  grid-template-columns: minmax(210px, 0.72fr) minmax(260px, 1fr);
   align-items: end;
   gap: clamp(1rem, 2.5vw, 2rem);
 }
