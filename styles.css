@@ -1067,24 +1067,20 @@ h3 {
 
 .pricing-comparison {
   display: grid;
-  grid-template-columns: minmax(210px, 0.72fr) minmax(260px, 1fr);
-  align-items: end;
+  grid-template-columns: minmax(0, 720px);
+  justify-content: center;
   gap: clamp(1rem, 2.5vw, 2rem);
 }
 
 .pricing-feature-list {
-  align-self: end;
-  margin-bottom: 0;
-  border-radius: 0.45rem;
-  background: rgba(228, 223, 216, 0.66);
-  padding: clamp(0.8rem, 1.7vw, 1.15rem);
+  display: none;
 }
 
 .pricing-feature-item,
 .pricing-plan-row {
   min-height: 4.05rem;
   display: grid;
-  grid-template-columns: 2.4rem minmax(0, 1fr);
+  grid-template-columns: 2.4rem minmax(5.8rem, 0.34fr) minmax(0, 1fr);
   align-items: center;
   gap: 0.85rem;
   padding: 0.8rem clamp(0.45rem, 1.1vw, 0.85rem);
@@ -1119,7 +1115,7 @@ h3 {
 }
 
 .pricing-plan-card .pricing-plan-row:nth-of-type(2)::before {
-  content: "発送目安";
+  content: "発送目安(※)";
 }
 
 .pricing-plan-card .pricing-plan-row:nth-of-type(3)::before {
@@ -1135,7 +1131,15 @@ h3 {
 }
 
 .pricing-plan-row::before {
-  display: none;
+  display: block;
+  grid-column: 2;
+  color: #9a8d76;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.pricing-plan-row > :last-child {
+  grid-column: 3;
 }
 
 .pricing-plan-card {
@@ -1735,12 +1739,8 @@ h3 {
   .pricing-comparison {
     grid-template-columns: 1fr;
     gap: clamp(1.8rem, 4vw, 2.4rem);
-    max-width: 680px;
+    max-width: 720px;
     margin-inline: auto;
-  }
-
-  .pricing-feature-list {
-    display: none;
   }
 
   .pricing-plan-card {
@@ -1748,19 +1748,18 @@ h3 {
   }
 
   .pricing-plan-row {
-    grid-template-columns: 2.4rem minmax(5.8rem, 0.45fr) minmax(0, 1fr);
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.55rem;
+    padding: 0.75rem 0.7rem;
   }
 
   .pricing-plan-row::before {
-    display: block;
     grid-column: 2;
-    color: #9a8d76;
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
+    margin-bottom: 0.1rem;
   }
 
   .pricing-plan-row > :last-child {
-    grid-column: 3;
+    grid-column: 2;
   }
 
   .faq-wrap {
