@@ -57,7 +57,7 @@ const revealTargets = [
   ".hero-copy > *",
   ".collections-item",
   ".process-columns > .process-card",
-  ".pricing-row",
+  ".pricing-chart-row",
   ".faq-item",
   ".origin-copy > *",
   ".origin-map-wrap",
@@ -76,7 +76,7 @@ const applyStagger = (selector, stepMs) => {
 applyStagger(".hero-copy > *", 110);
 applyStagger(".collections-item", 90);
 applyStagger(".process-columns > .process-card", 95);
-applyStagger(".pricing-row", 70);
+applyStagger(".pricing-chart-row", 70);
 applyStagger(".faq-item", 90);
 applyStagger(".origin-copy > *", 85);
 applyStagger(".care-note-wrap > *", 120);
