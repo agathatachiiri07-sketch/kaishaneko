@@ -48,7 +48,8 @@ const revealTargets = [
   ".hero-copy",
   ".collections-editorial",
   ".concept-sheet-section",
-  ".pricing-wrap",
+  ".experience-wrap",
+  ".experience-feature",
   ".size-wrap",
   ".origin-grid",
   ".faq-wrap",
@@ -76,6 +77,7 @@ const applyStagger = (selector, stepMs) => {
 applyStagger(".hero-copy > *", 110);
 applyStagger(".collections-item", 90);
 applyStagger(".process-columns > .process-card", 95);
+applyStagger(".experience-feature", 85);
 applyStagger(".pricing-chart-row", 70);
 applyStagger(".faq-item", 90);
 applyStagger(".origin-copy > *", 85);

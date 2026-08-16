@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" fill="none" aria-hidden="true">
+  <ellipse cx="320" cy="360" rx="220" ry="18" stroke="#C8B89A" stroke-width="1.2" opacity="0.55"/>
+  <path d="M250 330c0-58 31-92 70-92s70 34 70 92" stroke="#2E2D2A" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M250 330h140" stroke="#2E2D2A" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M286 238c-8-34 12-58 34-58s42 24 34 58" stroke="#2E2D2A" stroke-width="2.2"/>
+  <circle cx="286" cy="214" r="5" fill="#2E2D2A"/>
+  <circle cx="354" cy="214" r="5" fill="#2E2D2A"/>
+  <path d="M304 232c8 8 24 8 32 0" stroke="#2E2D2A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M320 176c-18 0-34 16-34 36v18" stroke="#2E2D2A" stroke-width="2.2"/>
+  <path d="M320 176c18 0 34 16 34 36v18" stroke="#2E2D2A" stroke-width="2.2"/>
+  <path d="M286 212 274 188M354 212 366 188" stroke="#2E2D2A" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="320" cy="268" r="34" stroke="#2E2D2A" stroke-width="2.2"/>
+  <path d="M302 268h36" stroke="#2E2D2A" stroke-width="2"/>
+  <path d="M320 250v36" stroke="#2E2D2A" stroke-width="2"/>
+  <path d="M308 256c4-6 20-6 24 0" stroke="#2E2D2A" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M120 250c18-18 34-10 34 14v72" stroke="#2E2D2A" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="118" cy="226" r="16" stroke="#2E2D2A" stroke-width="2.2"/>
+  <path d="M104 220c0-10 8-16 14-16s14 6 14 16" stroke="#2E2D2A" stroke-width="2"/>
+  <path d="M156 250c-10-24 8-42 28-42s38 18 28 42" stroke="#2E2D2A" stroke-width="2.2"/>
+  <circle cx="184" cy="196" r="16" stroke="#2E2D2A" stroke-width="2.2"/>
+  <path d="M168 190c0-10 8-16 16-16s16 6 16 16" stroke="#2E2D2A" stroke-width="2"/>
+  <path d="M484 250c-18-18-34-10-34 14v72" stroke="#2E2D2A" stroke-width="2.2" stroke-linecap="round"/>
+  <circle cx="522" cy="226" r="16" stroke="#2E2D2A" stroke-width="2.2"/>
+  <path d="M506 220c0-10 8-16 16-16s16 6 16 16" stroke="#2E2D2A" stroke-width="2"/>
+  <path d="M456 250c10-24-8-42-28-42s-38 18-28 42" stroke="#2E2D2A" stroke-width="2.2"/>
+  <circle cx="456" cy="196" r="16" stroke="#2E2D2A" stroke-width="2.2"/>
+  <path d="M440 190c0-10 8-16 16-16s16 6 16 16" stroke="#2E2D2A" stroke-width="2"/>
+  <path d="M196 286c18 8 36 8 54 0" stroke="#2E2D2A" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M390 286c18 8 36 8 54 0" stroke="#2E2D2A" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M248 302c8 10 18 14 28 14" stroke="#2E2D2A" stroke-width="2" stroke-linecap="round"/>
+  <path d="M392 302c8 10 18 14 28 14" stroke="#2E2D2A" stroke-width="2" stroke-linecap="round"/>
+</svg>
