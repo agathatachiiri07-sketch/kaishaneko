@@ -2485,6 +2485,15 @@ h3 {
     margin-bottom: 1.25rem;
   }
 
+  .pricing-note-combined {
+    white-space: normal;
+    font-size: 0.84rem;
+  }
+
+  .size-note {
+    font-size: 0.84rem;
+  }
+
   .step-header {
     gap: 0.45rem;
   }
