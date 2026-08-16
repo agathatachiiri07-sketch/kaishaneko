@@ -1383,10 +1383,27 @@ h3 {
   background: rgba(228, 223, 216, 0.6);
   font-size: 0.9rem;
   letter-spacing: 0.04em;
+  text-transform: none;
 }
 
 .pricing-note + .pricing-note {
   margin-top: 0.75rem;
+}
+
+.pricing-note-combined {
+  white-space: nowrap;
+}
+
+.size-note {
+  margin: clamp(1.3rem, 2.8vw, 1.8rem) auto 0;
+  max-width: 760px;
+  padding: 0.85rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  background: rgba(228, 223, 216, 0.6);
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
 }
 
 .size-section {
@@ -2466,6 +2483,15 @@ h3 {
 
   .size-subtitle {
     margin-bottom: 1.25rem;
+  }
+
+  .pricing-note-combined {
+    white-space: normal;
+    font-size: 0.84rem;
+  }
+
+  .size-note {
+    font-size: 0.84rem;
   }
 
   .step-header {
